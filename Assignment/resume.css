@@ -1,0 +1,43 @@
+td,th,h1{
+
+    text-align: center;
+}
+
+
+#Skills{
+
+    list-style-type: square;
+}
+
+#BE{
+    color: blue;
+    transition: 5s;
+}
+
+#BE:hover{
+    font-size: 80px;
+    background-color: bisque;
+    color: red;
+}
+
+#class-12{
+    color: red;
+    transition: 5s;
+}
+
+#class-12:hover{
+    font-size: 100px;
+    background-color: blueviolet;
+    color: darkorange;
+}
+
+#class-10{
+    color: darkorange;
+    /* * here I have to give the transition as the effect  */
+    transition: 5s;
+}
+#class-10:hover{
+    font-size: 150px;
+    background-color: rgb(197, 27, 69);
+    color: lightgrey;
+}
