@@ -1,0 +1,80 @@
+#id1{
+    color: red;
+    text-align: center;
+    font-size: 59px;
+
+    /* * if we want the first letter capital or uppercase  */
+    /* text-transform: uppercase; */
+    text-transform: capitalize;
+
+    /* * if we ant the space betwwen the letter  */
+    letter-spacing: 10px;
+
+    /* *in between words we want the space  */
+    word-spacing: 335px;
+
+    /* * to give the shadow for the text  */
+    /* ! text-shadow: horizontal offset , vertical offset , blur , color ; */
+    text-shadow: 4px 0px 7px blue;
+
+    /*! Note : for font style we have to depend in the google fonts  */
+
+    font-family: "Jersey 10", sans-serif;
+
+    /* ^ to increase the weight of the font  */
+    font-weight: 900;
+
+
+    /* ^ now I want the hover should happen for how much time  */
+   transition: 5s;
+    /* 3s = 3 seconds  */
+
+
+    
+}
+
+#id2{
+    color: chartreuse;
+    /* text-align: end;
+    text-align: left; */
+    text-align: center;
+    font-size: 59px;
+    text-transform: uppercase;
+    /* text-transform: lowercase; */
+    letter-spacing: 23px;
+
+    text-shadow: -4px 1px 2px magenta;
+    font-family: "Jersey 10", sans-serif;
+
+    transition: 5s;
+}
+
+#para{
+
+    /* * when we want the gap between the lines */
+
+    line-height: 42px;
+    font-family: "Jersey 10", sans-serif;
+
+    /* font-weight: 700; */
+    font-weight: lighter;
+}
+
+/* * pseudo class selector  */
+/* *pseudo element selector */
+
+
+/* * pseudo class selector  */
+
+#id1:hover{
+    color: aqua;
+    /* font-size: 20px; */
+    background-color: yellow;
+    font-family: "Eczar", serif;
+}
+
+#id2:hover{
+    color: black;
+    background-color:violet;
+    font-size: 100px;
+}
