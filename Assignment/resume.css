@@ -41,3 +41,36 @@ td,th,h1{
     background-color: rgb(197, 27, 69);
     color: lightgrey;
 }
+
+
+
+#image1{
+
+    width: 125px;
+    height: 125px;
+
+    transition: 3s;
+
+    /* *to make the circle  */
+    border-radius: 100%;
+
+    
+}
+
+
+#image1:hover{
+    transform: scale(1.5);  /*means zoom will be 150 %*/
+}
+
+#sign-image{
+    width: 125px;
+    height: 125px;
+
+    transition: 3s;
+
+
+}
+
+#sign-image:active{
+    transform: scale(2.0) rotate(360deg);
+}

@@ -1,0 +1,99 @@
+#image1{
+    width: 300px;
+    height: 300px;
+    border: 10px solid red;
+    padding: 50px;
+    /* padding: 47px 197px; */
+    /* padding: 40px; */
+    /* margin: 33px 66px 51px 47px; */
+    margin-right: 20px;
+    /* ! for the image prefer the content box  */
+    box-sizing: content-box;
+
+    /* ^ for curve radius  */
+    border-radius: 10px;
+
+    /* ^ to blur the image thickness */
+    filter: blur(12px);
+
+    transition: 2s;
+
+
+}
+
+
+
+#image2{
+    width: 300px;
+    height: 300px;
+    border: 10px solid green;
+    padding: 50px;
+    /* padding: 10px 20px 15px;
+    padding-top: 50px; */
+    /* margin-top: 50px; */
+
+    /* ! for the text content prefer to use the border box */
+
+    box-sizing: border-box;
+
+    /* to get the image in the complete circle then use more than 50 % value  */
+
+    border-radius: 75%;
+
+    opacity: 0.3;
+    
+}
+
+
+#image1:hover{
+    filter: blur(0px);
+}
+
+/* !another pseudo class selector  this will be used for the buttons most time */
+#image2:active{
+    opacity: 1;
+}
+
+
+/* * Accessing the another two images  */
+
+#image3{
+    width: 400px;
+    height: 400px;
+    border: 10px solid rgb(0, 110, 255);
+    padding: 30px;
+    margin-right: 80px;
+    transition: 3s;
+
+}
+
+#image3:hover{
+    /* transform: scale(1.5); */
+
+    /* for the zoon out go for the 0.1 or 0.2 */
+
+    transform: scale(0);
+}
+
+
+
+
+#image4{
+    width: 400px;
+    height: 400px;
+    border: 10px solid yellow;
+    padding: 30px;
+
+    /* ! for rotating the image  */
+    border-radius: 100%;
+
+    transition: 10s;
+}
+
+#image4:hover{
+    /* ^ to rotate the image 360 degree */
+    /* transform: rotate(360deg); */
+    transform: rotate(360deg) scale(1.5);
+
+    /* *to give the 2 effects at same time  */
+}
