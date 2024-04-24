@@ -1,0 +1,35 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+}
+
+h1{
+    display: inline;
+    background-color: red;
+    /* width: 500px; */
+    /* margin-right: 100px; */
+
+    /* ! for inline element we cannot give the custom width */
+}
+img{
+    display: block;
+    background-color: rgb(47, 100, 190);
+    padding: 30px;
+    margin: 15px;
+    /* width: 500px; */
+}
+
+p{
+    display: block;
+    background-color: green;
+}
+
+a{
+    /* display: block; */
+    display: inline-block;
+    /* ! inline block will take the advantage from the inline and block elevel elements  */
+    /* ^ when  we want to give the customize width and and want the content in the same line then use inline block */
+    /* width: 300px;
+    height: 200px; */
+    background-color: orange;
+}
