@@ -1,0 +1,120 @@
+body{
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+    padding: 0px;
+
+    /* ^ to add the multiple colors we have to use the linear-gradient */
+    background-image: linear-gradient(to right bottom, yellow, orange,  white ,rgba(0, 128, 0, 0.78) );
+    height: 100vh;
+}
+
+/* *when we want to overlap the content then we have to use the position property 
+* position: static : by default all the elements will have the static position; 
+* position: absolute : parent will access the center point
+* for position : relative the top left is the center point for the content along that it will acess the center point
+* for position : absolute the top left is the center point of the body that it will acess the center point
+* for position sticky : it will take its original space but if we scroll down then it will be there only (it will be used for the nav bar)
+*    position: fixed; here it will access to the body as the center point (it is not same to the sticky because it will not occupy the any space) but here it will acess the body as the center point */
+
+
+/* !Question 1) in relative the content will access the center point but along the which axis */
+
+/* img{
+    width: 20%;
+    height: 300px; 
+} */
+
+#image1{
+    /* *by default all the elements will have the static position */
+    /* position: static;   */
+    /* position: relative;
+    top: 300px;
+    left: 20px;
+    width: 20%;
+    height: 300px; */
+
+
+    /* position: absolute;
+    top: 16px;
+    left: 20px; */
+
+
+
+    /* position: sticky;
+    top: 2rem;
+    left: 7rem; */
+/* 
+    position: fixed; */
+
+    
+}
+
+
+#image2{
+    /* position: relative;
+    top: 87px;
+    left: 192px;
+
+    width: 20%;
+    height: 300px; */
+
+    /* position: absolute;
+    top: 108px;
+    left: 44rem; */
+
+/* 
+    position: sticky;
+    top: 2rem;
+    left: 7rem; */
+}
+
+
+nav{
+    background-color: white;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    /* ^ I have to give the position as the fixed because when I will scroll it should not move it should be fixed */
+    /* width: 100%;
+    position: fixed; */
+
+   
+}
+
+#cont-1{
+    list-style-type: none;
+    padding: 0px;
+    /* padding-top: 40px; */
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+a{  
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    padding: 20px;
+    /* margin: 20px; */
+}
+
+a:hover{
+    background-color: brown;
+}
+
+#menu{
+    list-style-type: none;
+    padding: 0px;
+    background-color: hotpink;
+    position: absolute;
+    display: none;
+
+    /* margin: 0px; */
+}
+
+#service-options-drop:hover #menu{
+    display: block;
+}
