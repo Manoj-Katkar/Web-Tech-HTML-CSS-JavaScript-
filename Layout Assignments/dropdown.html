@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout in Dropdown</title>
+    
+    <!-- ^link the logo -->
+    <link rel="shortcut icon" href="./images,audio,vedio/scaler logo.jpg" type="image/x-icon">
+
+    <!-- ^link the google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- ^link the css file  -->
+    <link rel="stylesheet" href="./dropdown.css">
+</head>
+<body>
+    <nav>
+        <ul id="container">
+            <li><a href="#">Home</a></li>
+            <li id="cold-drink"><a href="#">Cold-Drink</a>
+            <!-- ^ now here I have to create the another list  -->
+            <ul id="cold-drink-options">
+                <li><a href="https://www.coca-colacompany.com/" target="_blank">Coca-Cola</a></li>
+                <li><a href="https://www.jiomart.com/p/groceries/slice-mango-drink-1-2-l/490002001" target="_blank">Slice</a></li>
+                <li><a href="https://www.pepsi.com/" target="_blank">Pepsi</a></li>
+                <li><a href="">Sting</a></li>
+            </ul>
+            </li>
+
+
+            <li id="hot-drink"><a href="#">Hot-Drink</a>
+
+            <!-- ^ here also i have to give the options of the hot drinks using the nested list  -->
+            <ul id="hot-drink-options">
+                <li><a href="">Chai</a></li>
+                <li><a href="">Coffee</a></li>
+                <li><a href="">ginger-tea</a></li>
+                <li><a href="">Green tea</a></li>
+            </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

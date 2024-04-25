@@ -1,0 +1,66 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+    background-image: linear-gradient(to right bottom ,orange , white , green);
+    height: 100vh;
+}
+
+nav{
+    background-color: black;
+}
+
+#container{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 1.5rem;
+}
+
+a:hover{
+    background-color: hotpink;
+}
+
+#cold-drink-options{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display:none;
+    background-color: black;
+    position: absolute;
+}
+
+
+
+
+
+#cold-drink:hover #cold-drink-options{
+    display: block;
+}
+
+
+#hot-drink-options{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: none;
+    /* ^I have made the position as the absolute because it should not acquire its original space  */
+    position: absolute;
+
+    background-color: black;
+}
+
+/* now I have to give the hover effect for the Hot Drinks */
+#hot-drink:hover #hot-drink-options{
+    display: block;
+}
+
+
