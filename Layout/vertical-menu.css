@@ -1,0 +1,119 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Open Sans", sans-serif;
+    background-image: url(./images/unicorn.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+   
+}
+
+/* a:hover{
+    text-decoration: none;
+    color: red;
+} */
+
+/* h1:hover a{
+    text-decoration: none;
+    color: red;
+} */
+
+/* h1{
+    margin: 0px;
+}
+div{
+    background-color: chartreuse;
+} */
+
+/* div:hover a{
+    color: red;
+    text-decoration: none;
+} */
+
+/* a{
+    display: none;
+} */
+
+/* #div1:hover a{
+    display: inline;
+    text-decoration: none;
+    color: red;
+}
+
+#div2:hover a{
+    display: inline;
+    text-decoration: none;
+    color: red;
+} */
+
+nav{
+    background-color: rgba(30, 234, 224, 0.552);
+    width: 15%;
+    height: 100vh;
+}
+
+#main-container{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 20px ;
+
+
+}
+
+/* li{
+    width: 100%;
+} */
+
+a:hover{
+    background-color: red;
+}
+
+/* #mobile-options{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    background-color: rgba(30, 234, 224, 0.552);
+    display: none;
+    position: relative;
+
+
+    
+} */
+
+/* ! when I will use the position absolute then it will access body as center point then to make it should access the parent content center point then make the parent as the relative  */
+#Mobile{
+    position: relative;
+}
+/* ! to shift the ul towards the right side  */
+
+#mobile-options{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    color: black;
+    background-color: rgba(30, 234, 224, 0.552);
+    display: none;
+    position: absolute;
+    top: 0%;
+    left:139%;
+}
+
+
+#Mobile:hover #mobile-options{
+    display: block;
+}

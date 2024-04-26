@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical-Menu-NavBar</title>
+    <!-- logo link  -->
+
+    <link rel="shortcut icon" href="./images/myntra logo.png" type="image/x-icon">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!-- connecting to the css  -->
+    <link rel="stylesheet" href="./vertical-menu.css">
+
+</head>
+<body>
+    <!-- *hover effect will work for itself and also for its childrens 
+    * means we can able to give the hover effect to the it self and also to the childrents if we will give it to parent 
+    * then it will also control the all the child means that child is the descendant hence it will be controlled by grand-parents like that-->
+    <!-- <div id="div1">
+        <h1>Hiiii  <a href="#"> Hello </a></h1>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+        <h2>Bye</h2>
+        <a href="#"> Baki Sab Thik </a>
+    </div> -->
+
+    <!-- ^ lets take the another div  -->
+    <!-- <div id="div2">
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, animi!</span>
+        <h1>Welcome to <a href="#">My Website</a> </h1>
+    </div> -->
+
+    <!-- ! creating the vertical nav bar -->
+
+    <nav>
+        <ul id="main-container">
+            <li><a href="#">Home</a></li>
+            <li id="Mobile"><a href="#">Mobile</a>
+            
+                <ul id="mobile-options">
+                    <li><a href="">I-Phone</a></li>
+                    <li><a href="">Samsung</a></li>
+                    <li><a href="">1+</a></li>
+                    <li><a href="">Nokia</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Laptop</a></li>
+            <li><a href="#">Accessories</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
