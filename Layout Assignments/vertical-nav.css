@@ -1,0 +1,167 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+
+    /* ^lets add some hight quality background image  */
+    background-image: url(./images,audio,vedio/food.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+nav{
+    background-color: rgba(255, 166, 0, 0.641);
+    width: 15vw;
+    height: 100vh;
+    border-radius: 10px;
+    border: 6px solid red;
+}
+
+#main-container{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 20px;
+    width: 82%;
+}
+
+a:hover{
+    background-color: rgb(21, 242, 235);
+}
+
+#break-fast-options{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    position: absolute;
+    top: 0%;
+    left: 101%;
+    background-color: rgba(255, 166, 0, 0.641);
+    display: none;
+    width: 80%;
+
+    /* *NOw I wanted to make the content should acess the its parent as the center point than I have to make its parent position as relative */
+}
+
+#Break-Fast{
+    position: relative;
+}
+
+
+#Break-Fast:hover #break-fast-options{
+    display: block;
+}
+
+#veg-options{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    background-color: rgba(255, 166, 0, 0.641);
+    width: 100%;
+    display: none;
+}
+
+#Veg:hover #veg-options{
+    display: block;
+}
+
+#Non-Veg{
+    position: relative;
+}
+#nonVeg-options{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(255, 166, 0, 0.641);
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    display: none;
+
+}
+
+
+#Non-Veg:hover #nonVeg-options{
+    display: block;
+}
+
+#Lunch-options{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(255, 166, 0, 0.641);
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    width: 80%;
+    /* ! now I have to make its parent relative so it will access the content center point */
+    display: none;
+
+}
+
+#Lunch{
+    position: relative;
+}
+
+#Lunch:hover #Lunch-options{
+    display: block;
+}
+
+#Lunch-Veg{
+    position: relative;
+}
+
+
+#Lunch-veg-options{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(255, 166, 0, 0.641);
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    width: 100%;
+    display: none;
+}
+#Lunch-Veg:hover #Lunch-veg-options{
+    display: block;
+}
+
+#Lunch-Non-Veg{
+    position: relative;
+}
+
+#Lunch-nonVeg-options{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(255, 166, 0, 0.641);
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    width: 100%;
+    /* make its parent as the position relative  */
+    display: none;
+}
+
+#Lunch-Non-Veg:hover #Lunch-nonVeg-options{
+    display: block;
+}
+
