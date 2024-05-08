@@ -1,0 +1,59 @@
+body{
+    font-family: "Sedan SC", serif;
+}
+img{
+    border-radius: 10px;
+    height: 30vh;
+    width: 100%;
+}
+
+main{
+    width: 80%;
+
+   
+}
+
+#section1{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 2rem;
+    margin: 6rem;
+}
+h1{
+    align-items: center;
+}
+
+
+.card{
+    width: 30%;
+    /* text-align: center; */
+    border-radius: 10px;
+    /* background-color: yellow; */
+    border: 2px solid black;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* overflow: scroll; */
+}
+
+
+button{
+    height: 2.5rem;
+    width: 25%;
+    margin-bottom: 10px;
+    margin-left: 7rem;
+    border-radius: 20px;
+    background-color: aqua;
+    color: black;
+    /* * if we want to remove the border  */
+    /* border: none; */
+    border: 2px solid black;
+}
+
+
+#section2{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 6rem;
+}
