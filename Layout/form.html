@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Differant tags of the forms</title>
+
+    <!-- link the css  -->
+    <link rel="stylesheet" href="./form.css" />
+  </head>
+  <body>
+    <div>
+        <form action="">
+            <label for="fName">First Name : </label>
+            <!-- * WE HAVE TO USE THE FOR ATTRIBUTE TO IDENTIFY WITH THE HELP OF THE ID SO CLICK ON 
+                  * THE FIRST NAME IT WILL MOVE THE CURSUR TO THE INPUT FIELD OF THAT LABEL WITH THE HELP OF THE ID -->
+            <input type="text" id="fName" placeholder="Enter the First Name" />
+            <br /><br />
+            <label for="lastName">Last Name : </label>
+            <input type="text" id="lastName" placeholder="Enter the Last Name" />
+            <br /><br />
+            <label for="mobNo">Mobile No : </label>
+      
+            <input type="number" id="mobNo" placeholder="Enter Mobile Number" />
+            <br /><br />
+            <label for="AdNo">Aadhar No : </label>
+      
+            <input type="number" id="AdNo" placeholder="Enter Aadhar Number" />
+            <br /><br />
+            <label for="email">Email Id : </label>
+            <input type="email" id="email" placeholder="Enter Email Address" />
+            <br /><br />
+            <label for="">D.O.B : </label>
+            <!-- <input type="date"> -->
+            <input type="datetime-local" />
+            <!-- <input type="datetime"> -->
+            <br /><br />
+            <!-- ! when you want to select the one out of the many then we have to give the same name to the each radio input 
+              ! then computer will understand select  the one out of the many radio buttons input -->
+              <!-- * when using the radio name attribute is compulsory -->
+      
+            <label for="">Gender</label>
+            <input type="radio" name="gender"/>   
+            <label for="" id="male">Male</label>
+            <input type="radio" name="gender"/>   
+            <label for="">Female</label>
+            <input type="radio" name="gender"/>
+            <label for="">Others</label>
+      
+            <br /><br />
+            <label for="fileupload">Upload Picture</label>
+            <input type="file" id="fileupload">
+            <br /><br />
+      
+            <label for="">Project links : </label>
+            <input type="url">
+            <br /><br />
+      
+            <label for="">Create Password : </label>
+            <input type="password">
+      
+            <br /><br />
+      
+            <label for="">Confirm Password : </label>
+            <input type="password">
+            <br /><br />
+      
+            <input type="checkbox">
+            <label for="">I have read and understood the all terms and conditions .</label>
+            <br><br>
+      
+            <input type="checkbox" name="" id="">
+            <label for="">I am sharing the original identity </label>
+            <br><br>
+      
+            <input type="range">
+            <br>
+      
+            <!-- ^ to set the theme of the differant colors to our web page -->
+            <input type="color">
+            <br>
+      
+            <!-- ^via input tag creating the button -->
+            <input type="submit">
+            
+      
+            <input type="reset" name="" id="">
+            <br>
+      
+            <br /><br />
+            <button type="submit">Submit</button>
+            <!-- <br /><br /> -->
+            <button type="reset">Cancel</button>
+            <!-- <br><br> -->
+      
+            <!-- !creating the drop down  -->
+            <h1>DropDown</h1>
+            <select name="" id="">
+              <!-- !hidden is use to hide that option from the dropdown -->
+              <option value="" hidden>Select</option>
+              <option value="">India</option>
+              <option value="">America</option>
+              <option value="">Russia</option>
+              <option value="">Chaina</option>
+            </select>
+            <!-- <br><br> -->
+      
+      
+            <!-- * to make the input field as disable -->
+            <input type="text" disabled>
+      
+            <!-- <br>
+            <br> -->
+      
+            <!-- ! for text area  -->
+            <label for="">Feedback</label>
+            <textarea name="" id=""></textarea>
+      
+          </form>
+    </div>
+    
+  </body>
+</html>

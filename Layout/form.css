@@ -1,0 +1,20 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    /* background-image: linear-gradient(orange white green); */
+    background-color: rgba(0, 255, 255, 0.776);
+
+}
+
+[type = "text"]{
+    background-color: rgb(223, 220, 48);
+    color: blue;
+}
+
+[type = "password"]{
+    background-color: chocolate;
+}
+
+button[type = "reset"]{
+    background-color: magenta;
+}
