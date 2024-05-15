@@ -4,8 +4,10 @@ body{
     font-family: "Source Sans 3", sans-serif;
     background-image: url(./images/background\ banner.jpg);
     background-repeat: no-repeat;
-    /* * I I will go the cover then for the all the body will display the same background image  */
+    /* ! it will cover the background image to that particular section  */
     background-size: 100%;
+    /* ! it cover the background image to the hole body  */
+    /* background-size: cover; */
     
 }
 nav{
@@ -97,7 +99,7 @@ nav{
 }
 
 #menu li > a:hover{
-    background-color: orange;
+    background-color: rgba(255, 0, 0, 0.384);
     color: white;
 }
 
@@ -107,4 +109,126 @@ nav{
 
 #drop:hover #menu{
     display: block;
+}
+
+#submenu{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    top: 74%;
+    left: -204px;
+    background-color: white;
+    color: black;
+    width: 100%;
+    border: 2px solid rgba(170, 168, 168, 0.835);
+    border-radius: 6px;
+    display: none;
+}
+
+#Sub:hover #submenu{
+    display: block;
+}
+
+/* *--------------------------------Alpha Section------------------------------------------------- */
+
+#Alpha{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6.5rem;
+    /* color: white; */
+    /* margin-top: 2rem; */
+    /* * in easy way  */
+    /* text-align: center; */
+
+
+}
+#Alpha > h3{
+    color: white;
+    font-size: 3.7rem;
+    font-weight: 300;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+#Alpha > p{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 2rem;
+}
+
+#Alpha-buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* background-color: red; */
+    
+}
+
+#Alpha-buttons > button{
+    width: 14%;
+    height: 3.5rem;
+    border-radius: 5px;
+    border: none;
+    margin: 0.5rem;
+    border: 2px solid white;
+    font-size: 1.3rem;
+}
+
+#Alpha-buttons1{
+    background-color: white;
+    color: gray;
+}
+
+#Alpha-buttons2{
+    background-color: transparent;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+/* *--------------------------------Mobile Section--------------------------------------------------- */
+
+#mobile{
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    border-radius: 7px;
+    padding-top: 1rem;
+    margin-top: 8.3rem;
+    
+}
+
+#mobile > h2{
+    color: rgb(108,108,108);
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 2rem;
+}
+
+#mobile > hr{
+    width: 75%;
+}
+
+#mobile p{
+    color: rgb(108,108,108);
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 2rem;
+    margin-top: 0px;
+}
+
+#mobile > img{
+    width: 100%;
 }
