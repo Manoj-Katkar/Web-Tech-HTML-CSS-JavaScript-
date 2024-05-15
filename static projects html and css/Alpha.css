@@ -232,3 +232,65 @@ nav{
 #mobile > img{
     width: 100%;
 }
+
+
+/* *--------------------------------SignUp Section-------------------------------- - */
+
+#signUp{
+    background-color: rgb(232,153,128);
+    text-align: center;
+    margin-bottom: 10rem;
+}
+
+#signUp > h2{
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: rgb(249,229,222);
+    padding-top: 5rem;
+    margin: 0px;
+}
+
+
+#signUp > p{
+    font-size: 1.2rem;
+    color: rgb(249,229,222);
+    font-weight: 200;
+    margin-bottom: 2.5rem;
+}
+
+#signUp > input{
+    width: 18%;
+    height: 2rem;
+    padding: 0.7rem 2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(249,229,222);
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 4rem;
+    font-size: 1.2rem;
+    padding-left: 0.7rem;
+    
+}
+
+#signUp > input::placeholder{
+    color: rgb(249,229,222);
+}
+
+/* * here I am getting the error that I cannot able to active the content to get the border when user type in the input */
+
+
+#signUp > input:active{
+    border: 2px solid white;
+}
+
+#signUp > button{
+    height: 3.5rem;
+    width: 10%;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    background-color: white;
+    color: rgb(232,153,128);
+    margin-left: 1rem;
+    /* padding: 0.7rem 2rem; */
+}

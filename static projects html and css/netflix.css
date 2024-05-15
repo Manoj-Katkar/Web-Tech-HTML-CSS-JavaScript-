@@ -5,7 +5,7 @@ body{
     background-image: url(./images/background\ image\ final.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-color: black;
+    /* background-color: black; */
     
 }
 
@@ -64,4 +64,20 @@ header{
 
 i{
     color: white;
+}
+
+
+#TV-shows{
+    color: white;
+    text-align: center;
+}
+
+#TV-shows > h2{
+    font-size: 3.5rem;
+    /* font-weight: bolder; */
+    font-weight: 900;
+}
+
+#TV-shows > p{
+    font-size: 1.3rem;
 }
