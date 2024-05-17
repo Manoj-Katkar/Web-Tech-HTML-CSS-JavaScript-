@@ -6,6 +6,7 @@ body{
     background-repeat: no-repeat;
     /* ! it will cover the background image to that particular section  */
     background-size: 100%;
+    background-color: rgb(245,245,245);
     /* ! it cover the background image to the hole body  */
     /* background-size: cover; */
     
@@ -240,6 +241,7 @@ nav{
     background-color: rgb(232,153,128);
     text-align: center;
     margin-bottom: 10rem;
+    margin-top: 10rem;
 }
 
 #signUp > h2{
@@ -293,4 +295,150 @@ nav{
     color: rgb(232,153,128);
     margin-left: 1rem;
     /* padding: 0.7rem 2rem; */
+}
+
+
+/* * ---------------------------------Icons Section ---------------------------- */
+
+#icons{
+    width: 70%;
+    margin: auto;
+    /* *you can do it in the below manner also for the margin  */
+    margin: 2.5rem auto auto auto;
+    background-color: white;
+    margin-top: 2.5rem;
+    border-radius: 7px;
+    padding: 2rem;
+    box-sizing: border-box;
+    
+}
+
+#icons > div{
+    width: 48%;
+    display: inline-block;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+
+
+.fa-bolt-lightning{
+    font-size: 3rem;
+    /* margin-top: 2rem; */
+    background-color: rgb(232,153,128);
+    color: white;
+    padding: 2rem 2.2rem 2rem 2.2rem ;
+    border-radius: 100%;
+   
+}
+
+.fa-chart-area{
+    font-size: 3rem;
+    /* margin-top: 2rem; */
+    background-color: rgb(127,205,184);
+    color: white;
+    padding: 2rem 2.2rem 2rem 2.2rem ;
+    border-radius: 100%;
+}
+
+.fa-cloud{
+    font-size: 3rem;
+    /* margin-top: 2rem; */
+    background-color: rgb(144,176,186);
+    color: white;
+    padding: 2rem 2rem 2rem 2rem ;
+    border-radius: 100%;
+}
+
+.fa-lock{
+    font-size: 3rem;
+    /* margin-top: 2rem; */
+    background-color: rgb(229,203,149);
+    color: white;
+    padding: 2rem 2.2rem 2rem 2.2rem ;
+    border-radius: 100%;
+}
+
+
+
+#div1{
+    /* background-color: aqua; */
+    border-right: 2px solid #e5e5e5;
+    border-bottom: 2px solid #e5e5e5;
+    position: relative;
+    top: 1.8px;
+    left: 3.2px;
+}
+
+#div2{
+    /* background-color: violet; */
+}
+
+#div3{
+
+    /* background-color: purple; */
+}
+
+#div4{
+    border-top: 2px solid #e5e5e5;
+    border-left: 2px solid #e5e5e5;
+    /* background-color: magenta; */
+}
+
+
+#div1 > h2{
+    font-size: 2.3rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.481);
+}
+
+#div1 > p{
+    line-height: 2rem;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 200;
+}
+
+
+#div2 > h2{
+    font-size: 2.3rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.481);
+}
+
+#div2 > p{
+    line-height: 2rem;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 200;
+}
+
+
+#div3 > h2{
+    font-size: 2.3rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.481);
+}
+
+#div3 > p{
+    line-height: 2rem;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 200;
+}
+
+
+
+
+#div4 > h2{
+    font-size: 2.3rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.481);
+}
+
+#div4 > p{
+    line-height: 2rem;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 200;
 }
