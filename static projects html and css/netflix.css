@@ -85,10 +85,11 @@ i{
 #TV-shows > p{
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
+    
 }
 
 #TV-shows > input{
-    width: 30%;
+    width: 25%;
     height: 2.5rem;
     margin-bottom: 2rem;
     background-color: rgba(0, 0, 0, 0.476);
@@ -98,7 +99,7 @@ i{
 }
 
 #TV-shows > input::placeholder{
-    color: white;
+    color: rgb(184,181,167);
     font-size: 1.2rem;
 }
 
@@ -116,6 +117,13 @@ i{
 
 #main-section > hr{
     margin-top: 14.1rem;
+    width: 100%;
+    height: 0.5rem;
+    background-color: rgba(128, 128, 128, 0.741);
+}
+
+/* ***************All hr ******************************* */
+hr{
     width: 100%;
     height: 0.5rem;
     background-color: rgba(128, 128, 128, 0.741);
@@ -151,6 +159,7 @@ i{
 
 #Enjoy-text > p{
     font-size: 1.5rem;
+    line-height: 2rem;
 }
 
 #Enjoy-vedio-image{
@@ -173,4 +182,182 @@ i{
     left: 13%;
     width: 73%;
 
+}
+
+
+/* *---------------Watch Section ------------------------------------------- */
+#Watch{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+#Watch-left{
+    width: 48%;
+    /* background-color: yellow; */
+    color: white;
+}
+
+
+#Watch-right{
+    width: 48%;
+    /* background-color: magenta; */
+    position: relative;
+}
+
+#Watch-left > h2{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+#Watch-left > p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+
+#Watch-right > img{
+    width: 100%;
+    /* * it should occupy its original space hence use position relative  */
+    position: relative;
+    z-index: 2;
+}
+
+#Watch-right > video{
+    /* *because it should not occupy the its original space  */
+    position: absolute;
+    top: 10%;
+    left: 18%;
+    width: 62.5%;
+    z-index: 1;
+}
+
+
+/* *----------------------Create Section ------------------------------- */
+
+
+#Create{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    /* background-color: red; */
+}
+
+#Create-left{
+    /* background-color: yellow; */
+    width: 48%;
+
+}
+
+
+#Create-right{
+    /* background-color: magenta; */
+    width: 47%;
+    color: white;
+}
+
+#Create-left > img{
+    width: 100%;
+}
+
+#Create-right > h2{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: 0px;
+}
+
+#Create-right > p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+
+
+
+/* *-----------------------------Download Section --------------------------- */
+
+#Download{
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Download-left{
+    width: 48%;
+    /* background-color: yellow; */
+    position: relative;
+}
+
+#Download-right{
+    width: 48%;
+    /* background-color: magenta; */
+    margin-left: 0px;
+}
+
+#Download-left-box{
+    width: 57%;
+    height: 15%;
+    margin: auto;
+    background-color: black;
+    border: 2px solid rgb(51,50,55);
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 69%;
+    left: 22%;
+
+}
+
+#Download-left-box > img{
+    width: 25%;
+    height: 80%;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+
+#Download-left > img{
+    width: 100%;
+    
+}
+
+#Download-left-box > div > p{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+}
+
+#Download-left-box > div > span{
+    color: rgb(0,82,234);
+}
+
+#Download-right > h2{
+    color: white;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: 0px;
+}
+
+#Download-right > p{
+    color: white;
+    font-size: 1.5rem;
+    line-height: 2rem;
 }
