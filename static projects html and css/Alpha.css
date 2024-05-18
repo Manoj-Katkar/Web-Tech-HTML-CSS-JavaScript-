@@ -442,3 +442,336 @@ nav{
     color: rgba(0, 0, 0, 0.8);
     font-weight: 200;
 }
+
+
+/* *-------------------------------Cards Section--------------------------------  */
+#cards{
+    display: flex;
+    width: 70%;
+    margin: 3rem auto auto auto;
+    text-align: center;
+    justify-content: space-between;
+   
+}
+
+#cards > div > img{
+    width: 100%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+
+}
+
+#cards > div{
+    width: 48%;
+    border-radius: 7px;
+}
+
+
+
+#cards-1 > h2{
+    font-size: 2.3rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.481);
+}
+
+#cards-1 > p{
+    line-height: 2rem;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 200;
+}
+
+
+
+#cards-2 > h2{
+    font-size: 2.3rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.481);
+}
+
+#cards-2 > p{
+    line-height: 2rem;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 200;
+}
+
+#cards > div > button{
+    width: 30%;
+    font-size: 1.1rem;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+
+
+
+/* * --------------------------------footer -------------------------------------- */
+/* Now Designing the footer  */
+footer{
+    padding: 4em 0 6em 0;
+    text-align: center;
+}
+footer #footer-1{
+    /* I want the all the list iteams in one line  */
+
+    list-style-type: none;
+    /* display: inline; */
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    /* background-color: red; */
+    
+}
+
+footer #footer-1 a{
+    /* to change the all logo color  */
+    color: gray;
+}
+
+
+/* now the access the second ul  */
+footer #footer-2{
+    /* remove the bullet points  */
+    list-style-type: none;
+    /* because a is the block level element and ul also  */
+    /* so now I want each should come in single line  */
+
+    display: flex;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+footer #footer-2 a{
+
+    /* to change the underline type  */
+    text-decoration: dashed;
+}
+
+/* now to increase the size of the each icon */
+footer #footer-1 .fa-brands{
+
+    color: rgba(128, 128, 128, 0.571);
+    font-size: 1.5rem;  /*this will increase the size of  the any icon */
+}
+
+footer #footer-1 .fa-solid{
+    color: red;    color: rgba(128, 128, 128, 0.571);
+        
+    font-size: 1.5rem;  /*this will increase the size of  the any icon */
+}
+
+
+
+/* *--------------------------------------------Extra CSS ------------------------------------------------------- */
+
+
+
+/* *adding the one sidebar  */
+#box{
+    padding: 0px;
+    margin: 0px;
+
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * ---------------------------------Mobile Version ----------------------------*/
+
+@media (max-width : 600px){
+
+    body{
+
+        /* ! it will cover the background image to that particular section  */
+        background-size: 180%;
+
+        /** I have to adjust the position for mobile then for the horizontally I have to make it as the center */
+        background-position-x: center;
+
+    }
+
+    #box{
+        display: inline-block;
+        padding: 0.3rem 1.3rem;
+        border: 2px solid rgba(255, 255, 255, 0.043);
+        color: white;
+        background-color: rgba(255, 255, 255, 0.285);
+        font-size: 1rem;
+        border-radius: 7px;
+        margin-left: 0.7rem;
+        margin-top: 0.7rem;
+        box-sizing: border-box;
+    }
+
+    nav{
+        display: none;
+    }
+
+    #Alpha{
+        width: 80%;
+        margin: auto;
+        margin-top: 0rem;
+        text-align: center;
+    }
+
+    #Alpha > h3{
+
+        font-size: 2rem;
+
+    }
+    
+    #Alpha > p{
+        font-size: 1.1rem;
+    }
+
+    #Alpha-buttons{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    #Alpha-buttons > button{
+        width: 100%;
+        height: 2.8rem;
+        font-size: 1rem;
+
+    }
+
+    #Alpha-buttons > button{
+        width: 100%;
+        height: 2.8rem;
+        font-size: 1rem;
+
+    }
+
+    #Alpha-buttons2{
+        margin-bottom: 2rem;
+    }
+
+
+
+/* *--------------------------------Mobile Section--------------------------------------------------- */
+
+    #mobile{
+
+        width: 100%;
+        text-align: center;
+        border-radius: 0px;
+        padding-top: 0.5rem;
+        margin-top: 0px;
+        
+    }
+
+    #mobile > h2{
+
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    #mobile > hr{
+        width: 85%;
+    }
+
+    #mobile p{
+
+        font-size: 1.2rem;
+        padding: 1rem;
+        margin-top: 0px;
+    }
+
+    #mobile > img{
+        width: 100%;
+    }
+
+    /* ! break tag I do not want hence display none */
+    br{
+        display: none;
+    }
+
+
+    /* *--------------------Icons Section ----------------------- */
+
+
+    #icons{
+        width: 100%;
+        /* *you can do it in the below manner also for the margin  */
+        margin: 1rem auto auto auto;
+        
+    }
+
+
+    #icons > div{
+        width: 100%;
+        padding-top: 2rem;
+        border-bottom: 2px solid #e5e5e5;
+    }
+
+
+
+
+    #div1{
+        /* background-color: aqua; */
+        border-right: none;
+        border-bottom: none;
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+
+    
+    #div4{
+        border-top: none;
+        border-left: none;
+    }
+
+
+
+    /* *-------------------------------Cards Section--------------------------------  */
+    #cards{
+
+        width: 100%;
+        margin: 1rem auto auto auto;
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+
+
+    #cards > div{
+        width: 100%;
+        border-radius: 7px;
+        margin-top: 2rem;
+    }
+
+
+    #cards > div > button{
+        width: 90%;
+        font-size: 1rem;
+        padding: 1rem 2rem 1rem 2rem;
+        background-color: white;
+        border-radius: 7px;
+        color:  #8692a6;
+        border-radius: 2px solid  #8692a6;
+    }
+
+
+}

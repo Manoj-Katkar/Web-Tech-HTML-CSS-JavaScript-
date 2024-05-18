@@ -1,0 +1,58 @@
+/* ! WHATEVER WE PROVIDE OUTSIDE THAT WILL BE FOR ALL THE DEVICES */
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: red;
+}
+
+#Mobile{
+    display: none;
+}
+
+#Tabs{
+    display: none;
+}
+
+
+/* *this is for the mobile means from 0 px to 600 px width all mobile device will come under that  */
+@media (max-width : 600px){
+
+    body{
+        background-color: yellow;
+    }
+
+    #Mobile{
+        display: block;
+    }
+
+    #desktop{
+        display: none;
+    }
+
+    #Tabs{
+        display: none;
+    }
+
+}
+
+
+/* * for tab version */
+@media (min-width:601px) AND (max-width : 1000px) {
+    
+    body{
+        background-color: blue;
+    }
+
+    #Mobile{
+        display: none;
+    }
+
+    #desktop{
+        display: none;
+    }
+
+    #Tabs{
+        display: block;
+    }
+}
