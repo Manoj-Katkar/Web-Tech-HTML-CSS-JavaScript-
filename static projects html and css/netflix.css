@@ -30,6 +30,10 @@ header{
 
 }
 
+#main-section{
+    background-color: rgba(0, 0, 0, 0.777);
+}
+
 /* to change the header button size  */
 #main-section #right button,a{
     width: 5rem;
@@ -362,4 +366,139 @@ hr{
     color: white;
     font-size: 1.5rem;
     line-height: 2rem;
+}
+
+
+
+
+
+/* *-----------------------------------------------FAQ ----------------------------------------- */
+
+#FAQ{
+    color: white;
+    /* text-align: center; */
+
+}
+
+#FAQ > h1{
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+#FAQ-DIV1{
+    width: 70%;
+    margin: auto;
+}
+
+#FAQ-DIV1 > h3{
+    background-color:  #2d2d2d;
+    padding: 1.5rem 0.5rem 1.5rem 1.3rem;
+    font-size: 1.7rem;
+    font-weight: 300;
+    margin: 0.5rem;
+
+}
+
+#FAQ-DIV1 > h3 > i{
+    font-size: 2rem;
+}
+
+#FAQ-DIV2{
+    text-align: center;
+    margin-bottom: 4.5rem;
+}
+
+#FAQ-DIV2 > p{
+    font-size: 1.2rem;
+    margin-top: 3rem;
+}
+
+#FAQ-DIV2 > input{
+    width: 22%;
+    height: 3.1rem;
+    margin-right: 1.7rem;
+    background-color: 
+    #0f0f0f;
+    color: #efe9e2 ;
+    background-color: black;
+    border: 2px solid #605549 ;
+    border-radius: 5px;
+    padding: 0.2rem 0.2rem 0.2rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+
+#FAQ-DIV2 > button{
+    width: 14%;
+    height: 3.4rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+
+
+/* *---------------------footer------------------------------------------------ */
+footer{
+    background-color: black;
+    width: 100%;
+    color: white;
+    margin-top: 2rem;
+}
+footer a{
+    background-color: black;
+    color: white;
+}
+
+footer h3{
+    padding-left: 9rem;
+}
+
+
+footer #footer-div{
+    width: 90%;
+    /* margin: auto; */
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0%;
+    
+}
+
+footer #footer-div a{
+    background-color: black;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+footer #footer-div ul{
+    list-style-type: none;
+}
+footer #footer-div ul li{
+    margin-bottom: 1rem;
+}
+
+
+#language-select{
+    width: 80%;
+    font-size: 1rem;
+    padding: 0.2rem 0.8rem 0.2rem 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid white;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+}
+
+/* ! this css is not getting applied ask this doubt to sir for icon  */
+
+.fa-language{
+    color: white;
+    background-color: red;
+    font-size: 4rem;
 }

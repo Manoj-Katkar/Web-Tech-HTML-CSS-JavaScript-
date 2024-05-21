@@ -1,0 +1,80 @@
+/* ^Simple Selectors */
+/* *id , class , element , group , attribute , universal selector  */
+
+
+/* ^Combinator Selector */
+
+/* *child selector  */
+
+/* #container > h1{
+    color: yellow;
+} */
+
+/* *Descendant Selector */
+
+/* !it will select the child and also the grand child  */
+
+/* #container  h1{
+    color: red;
+} */
+
+
+/* *First Adjacent  Sibling*/
+
+/* #container  h1 + p{
+    color: purple;
+} */
+
+/* it will target the first paragraph that is adjacent to h1 */
+/* 
+#players h1 + p{
+    
+    background-color: purple;
+} */
+
+
+/* *General Sibling (all sibings will be selected) */
+/* 
+#container  h1 ~ p{
+    color: purple;
+} */
+
+
+
+/* #container-2 h1 ~ p{
+    it will target the All paragraph that is adjacent to h1
+    background-color: red;
+} */
+
+
+
+/* ^pseudo class selector */
+/* if we want to select the elements by their position then we use the pseudo class selector  */
+/* ^ We have already learned the two pseudo class selectors that is hover and active */
+
+#ipl > li:first-child{
+    color: red;
+}
+
+#ipl > li:last-child{
+    color: magenta;
+}
+
+/* *it will take the position of that child  */
+#ipl > li:nth-child(5){
+    background-color: magenta;
+}
+
+/* *if we want to select the frequently elements after each other  */
+/* after 2nd element it will target the element  */
+
+#ipl > li:nth-child(2n){
+    background-color: rgb(231, 245, 35);
+}
+
+
+/* *Now lets target the all 3rd li of the players */
+#players > li:nth-child(2n){
+    background-color: rgb(229, 22, 50);
+    
+}
