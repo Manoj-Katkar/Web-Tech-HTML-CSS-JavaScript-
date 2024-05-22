@@ -502,3 +502,396 @@ footer #footer-div ul li{
     background-color: red;
     font-size: 4rem;
 }
+
+
+
+
+
+/* ^NOW WRITING THE CSS FOR THE MOBILE VERSION */
+
+@media (max-width : 600px) {
+
+    body{
+        width: 100%;
+        background-image: url(./images/background\ image\ final.jpg);
+        background-repeat: no-repeat;
+        background-size: 200%;
+        
+    }
+
+    #main-section{
+        width: 100%;
+    }
+    
+
+    /* now reduce the width of the header  */
+
+    header{
+        padding: 12px 24px;
+        margin: 0px;
+        width: 80%; 
+        margin: auto;
+        /* background-color: rgba(0, 0, 0, 0.684); */
+        /* do it for the section under which you want the background-color:  as black ; */
+    
+    
+    }
+
+
+    
+    /* to change the dropdown size and all  */
+    #main-section #right  select{
+
+        padding: 6px 6px;
+        font-size: 1rem;
+    }
+    /* to give the gap between the dropdown and sign in button */
+    
+    #main-section #right{
+        display: flex;
+        justify-content: space-between;
+        gap: 3px;
+    }
+    
+    #left img{
+        width: 65%;
+        height: 2.5rem;   
+    }
+
+    #main-section > hr {
+        margin-top: 0rem;
+    }
+
+
+    hr{
+        width: 100%;
+    }
+
+
+
+    /* *Tv Shows Section mobile version  */
+
+
+    #TV-shows{
+        margin-top: 6rem;
+        width: 90%;
+        margin: auto;
+        /* background-color: red; */
+    }
+    
+    #TV-shows > h2{
+        font-size: 1.9rem;
+        /* font-weight: bolder; */
+        font-weight: 700;
+    }
+    
+    #TV-shows > p{
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        
+    }
+    
+    #TV-shows > input{
+        width: 80%;
+    }
+    
+    #TV-shows > input::placeholder{
+    
+        font-size: 1rem;
+    }
+    
+    #TV-shows > button{
+        width: 48%;
+        background-color: red;
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    
+       
+    }
+
+
+
+
+
+
+    /* *--------------------Enjoy Mobile Section ---------------------------- */
+
+#Enjoy{
+
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#Enjoy-text{
+    width: 100%;
+    /* background-color: yellow; */
+    color: white;
+    text-align: center;
+   
+
+}
+
+#Enjoy-text > h2{
+    font-size: 2rem;
+
+}
+
+#Enjoy-text > p{
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+
+#Enjoy-vedio-image{
+    width: 100%;
+    /* background-color: magenta; */
+    position: relative;
+}
+
+
+
+
+/* *------------------------Download Mobile Section ------------------------------- */
+
+
+
+#Download{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+#Download-left{
+    width: 100%;
+    /* background-color: yellow; */
+    position: relative;
+}
+
+
+#Download-left-box{
+    width: 72%;
+    height: 20%;
+    top: 69%;
+    left: 19%;
+
+}
+
+#Download-left-box > img{
+    width: 18%;
+    height: 75%;
+
+}
+
+
+#Download-left > img{
+    width: 110%;
+    
+}
+
+#Download-left-box > div > p{
+
+    font-size: 0.9rem;
+
+}
+
+#Download-left-box > div > span{
+    font-size: 0.9rem;
+}
+
+
+#Download-right{
+    width: 100%;
+    /* background-color: magenta; */
+    margin-left: 0px;
+    text-align: center;
+}
+
+
+#Download-right > h2{
+    font-size: 1.8rem;
+}
+
+#Download-right > p{
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+
+
+
+
+
+
+/* * -----------------------------------------Watch Section ----------------------- */
+
+
+
+#Watch{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Watch-left{
+    width: 100%;
+    text-align: center;
+}
+
+
+#Watch-right{
+    width: 100%;
+}
+
+#Watch-left > h2{
+    font-size: 1.8rem;
+}
+
+#Watch-left > p{
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+
+
+
+
+
+
+
+/* *------------------------------Create Mobile Section ------------------------------- */
+
+
+
+
+#Create{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+#Create-left{
+    width: 100%;
+}
+
+
+#Create-right{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+#Create-right > h2{
+    font-size: 1.8rem;
+}
+
+#Create-right > p{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+
+
+
+
+
+/* *-------------------------------FAQ Mobile Section --------------------------- */
+
+#FAQ{
+    width: 90%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#FAQ > h1{
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+#FAQ-DIV1{
+    width: 100%;
+    margin: auto;
+}
+
+#FAQ-DIV1 > h3{
+    background-color:  #2d2d2d;
+    padding: 1.5rem 0.5rem 1.5rem 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 0.5rem;
+
+}
+
+#FAQ-DIV1 > h3 > i{
+    font-size: 2rem;
+}
+
+#FAQ-DIV2{
+    text-align: center;
+    margin-bottom: 4.5rem;
+}
+
+#FAQ-DIV2 > p{
+    font-size: 1.2rem;
+    margin-top: 3rem;
+}
+
+#FAQ-DIV2 > input{
+    width: 22%;
+    height: 3.1rem;
+    margin-right: 1.7rem;
+    background-color: 
+    #0f0f0f;
+    color: #efe9e2 ;
+    background-color: black;
+    border: 2px solid #605549 ;
+    border-radius: 5px;
+    padding: 0.2rem 0.2rem 0.2rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+
+#FAQ-DIV2 > button{
+    width: 14%;
+    height: 3.4rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
