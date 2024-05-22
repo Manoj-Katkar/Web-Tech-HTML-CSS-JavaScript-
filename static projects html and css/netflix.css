@@ -495,6 +495,12 @@ footer #footer-div ul li{
     border-radius: 5px;
 }
 
+/* make the another div display none */
+
+#Mobile-ul{
+    display: none;
+}
+
 /* ! this css is not getting applied ask this doubt to sir for icon  */
 
 .fa-language{
@@ -502,6 +508,10 @@ footer #footer-div ul li{
     background-color: red;
     font-size: 4rem;
 }
+
+
+
+
 
 
 
@@ -645,7 +655,7 @@ footer #footer-div ul li{
 }
 
 #Enjoy-text > p{
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     line-height: 1.5rem;
 }
 
@@ -722,7 +732,7 @@ footer #footer-div ul li{
 }
 
 #Download-right > p{
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     line-height: 1.5rem;
 }
 
@@ -759,7 +769,7 @@ footer #footer-div ul li{
 }
 
 #Watch-left > p{
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.5rem;
 }
 
@@ -812,9 +822,9 @@ footer #footer-div ul li{
 /* *-------------------------------FAQ Mobile Section --------------------------- */
 
 #FAQ{
-    width: 90%;
+    width: 100%;
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -829,57 +839,116 @@ footer #footer-div ul li{
 }
 
 #FAQ-DIV1{
-    width: 100%;
+    width: 90%;
     margin: auto;
+
 }
 
 #FAQ-DIV1 > h3{
     background-color:  #2d2d2d;
-    padding: 1.5rem 0.5rem 1.5rem 1.3rem;
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin: 0.5rem;
+    padding: 1.1rem 0.5rem 1.1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0.7rem;
 
 }
 
 #FAQ-DIV1 > h3 > i{
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 #FAQ-DIV2{
-    text-align: center;
-    margin-bottom: 4.5rem;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #FAQ-DIV2 > p{
     font-size: 1.2rem;
-    margin-top: 3rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 #FAQ-DIV2 > input{
-    width: 22%;
-    height: 3.1rem;
-    margin-right: 1.7rem;
-    background-color: 
-    #0f0f0f;
-    color: #efe9e2 ;
-    background-color: black;
-    border: 2px solid #605549 ;
-    border-radius: 5px;
-    padding: 0.2rem 0.2rem 0.2rem 1.5rem;
-    font-size: 1.1rem;
+    width: 80%;
+    margin-left: 2.9rem;
+    margin-bottom: 2rem;
+    height: 2.3rem;
 }
 
 
 #FAQ-DIV2 > button{
-    width: 14%;
-    height: 3.4rem;
-    background-color: red;
+    width: 35%;
+    font-size: 1.1rem;
+}
+
+
+
+
+/* * -------------------------------footer Mobile Section ---------------------------*/
+
+
+#footer-div{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+footer{
+    background-color: black;
+    width: 100%;
     color: white;
-    border: none;
-    border-radius: 7px;
-    font-size: 1.5rem;
-    font-weight: 600;
+    margin-top: 2rem;
+}
+footer a{
+    background-color: black;
+    color: white;
+}
+
+footer h3{
+    padding-left: 1.9rem;
+}
+
+
+/* make the footer-div  display none */
+
+footer > #footer-div{
+    display: none;
+}
+
+
+
+/* make the another div display block */
+
+#Mobile-ul{
+    display: block;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Mobile-ul > ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 1.7rem;
+    line-height: 2rem;
+}
+
+#Mobile-ul > ul > li > a{
+    color: white;
+    text-decoration: underline;
+}
+
+/* ! below css is not getting apply doubt I have to ask to the sir  */
+
+#Mobile-ul > select{
+    margin-top: 10rem;
+    width: 15%;
 }
 
 
