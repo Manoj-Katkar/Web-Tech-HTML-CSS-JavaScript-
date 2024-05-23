@@ -240,8 +240,8 @@ nav{
 #signUp{
     background-color: rgb(232,153,128);
     text-align: center;
-    margin-bottom: 10rem;
-    margin-top: 10rem;
+    margin-bottom: 1rem;
+    margin-top: 8rem;
 }
 
 #signUp > h2{
@@ -464,6 +464,7 @@ nav{
 #cards > div{
     width: 48%;
     border-radius: 7px;
+    background-color: #ffffff;
 }
 
 
@@ -498,8 +499,13 @@ nav{
 
 #cards > div > button{
     width: 30%;
-    font-size: 1.1rem;
-    padding: 1rem 2rem 1rem 2rem;
+    font-size: 1rem;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    border: 2px solid rgba(128, 128, 128, 0.68);
+    color: rgba(0, 0, 0, 0.652);
+    border-radius: 7px;
 }
 
 
@@ -751,6 +757,7 @@ footer #footer-1 .fa-solid{
         margin: 1rem auto auto auto;
         display: flex;
         flex-direction: column;
+        
     
     }
 
@@ -772,6 +779,92 @@ footer #footer-1 .fa-solid{
         color:  #8692a6;
         border-radius: 2px solid  #8692a6;
     }
+
+
+
+
+
+    
+/* *--------------------------------SignUp Mobile Section-------------------------------- - */
+
+#signUp{
+    width: 100%;
+    height: 20rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0rem;
+}
+
+#signUp > h2{
+    font-size: 1.7rem;
+    padding-top: 2.5rem;
+}
+
+
+#signUp > p{
+    font-size: 0.9rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+#signUp > input{
+    width: 75%;
+    margin-left: 1.2rem;
+    margin-bottom: 0px;
+    height: 1.5rem;
+    
+}
+
+
+
+#signUp > button{
+    width: 86%;
+    margin-left: 2.4rem;
+    margin-top: 1rem;
+    display: block;
+    height: 2.5rem;
+}
+
+
+
+
+
+
+/* * --------------------------------footer Mobile Section  -------------------------------------- */
+
+
+
+
+/* now the access the second ul  */
+footer #footer-2{
+    /* remove the bullet points  */
+    list-style-type: none;
+    /* because a is the block level element and ul also  */
+    /* so now I want each should come in single line  */
+
+    display: block;
+    justify-content: center;
+
+    line-height: 1.7rem;
+}
+
+footer #footer-2 a{
+
+    /* to change the underline type  */
+    text-decoration: dashed;
+}
+
+/* now to increase the size of the each icon */
+footer #footer-1 .fa-brands{
+
+    color: rgba(128, 128, 128, 0.571);
+    font-size: 1.5rem;  /*this will increase the size of  the any icon */
+}
+
+footer #footer-1 .fa-solid{
+    color: red;    color: rgba(128, 128, 128, 0.571);
+        
+    font-size: 1.5rem;  /*this will increase the size of  the any icon */
+}
 
 
 }
