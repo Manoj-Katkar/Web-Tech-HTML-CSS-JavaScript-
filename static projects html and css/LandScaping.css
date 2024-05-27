@@ -1,0 +1,84 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+}
+
+nav{
+    background-color: rgba(0, 0, 0, 0.815);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem 2rem 3rem;
+}
+#nav-left > h2{
+    margin: 0px;
+    color: white;
+    font-weight: 500;
+}
+
+#nav-left{
+    /* background-color: red; */
+}
+#nav-right{
+ /* background-color: magenta; */
+ width: 45%;
+}
+
+#nav-right > ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-right > ul > li >  a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+/* *--------------------------------------------------------------------Grass Section- -------------------------------------------- */
+#Grass{
+    position: relative;
+}
+
+#Grass > img{
+    width: 100%;
+    background-size: cover;
+    height: auto;
+}
+
+#Grass > div{
+    color: white;
+    position: absolute;
+    top: 39%;
+    left: 24%;
+    text-align: center;
+
+}
+
+#Grass > div > h2{
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+#Grass > div >P{
+    font-size: 1.2rem;
+}
+
+#Grass > div > button{
+    height: 2.5rem;
+    width: 15%;
+    padding: 0.5rem;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
