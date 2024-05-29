@@ -11,7 +11,11 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 2rem 3rem 2rem 3rem;
-    /* position: sticky; doubt  */  
+    /* ^ Doubt I have to ask to the sir  */
+    /* position: sticky;  */
+    /* position: fixed;
+    top: 0;
+    width: 100%; */
 }
 #nav-left > h2{
     margin: 0px;
@@ -97,7 +101,7 @@ nav{
     width: 90%;
     margin: auto;
     margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-bottom: 7rem;
 
 }
 
@@ -192,4 +196,84 @@ nav{
 
 #first-para{
     margin-top: 3.5rem;
+}
+
+
+
+
+
+
+
+/* *-------------------------------------------------------Services Section ---------------------------------------  */
+
+#Services{
+    background-color:  #6aaf08;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
+}
+
+#Services-top{
+    width: 50%;
+    margin: auto;
+    /* background-color: red; */
+    text-align: center;
+    margin-top: 4rem;
+    position: relative;
+}
+
+#Services-top > h3{
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    color: white;
+}
+
+#Services-top > hr{
+    width: 10%;
+    height: 0.2rem;
+    margin-top: 0px;
+    background-color: #c3df9c;
+    border: none;
+    position: absolute;
+    top: 64%;
+    left: 41%;
+}
+
+#Services-top > div{
+    /* background-color: yellow; */
+    margin-top: 2rem;
+}
+
+#Services-top > div > span{
+    color: white;
+    font-weight: 1.3rem;
+}
+
+#Services-bottom{
+    width: 85%;
+    margin: auto;
+    margin-top: 4rem;
+    /* background-color: magenta; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+    color: white;
+}
+
+#Services-bottom > div{
+    /* background-color: maroon; */
+    text-align: center;
+}
+
+#Services-bottom h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+#Services-bottom > div > img{
+    width: 80%;
+    border-radius: 150%;
+    border: 7px solid #79b721;
+    margin-top: 2rem;
 }
