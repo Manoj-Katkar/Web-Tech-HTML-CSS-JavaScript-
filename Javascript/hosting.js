@@ -34,7 +34,7 @@ abc();
 
 
 
-// Function Hosting : Entire the function will move tothe top of the scope 
+// Function Hosting : Entire the function will move to the top of the scope 
 
 
 

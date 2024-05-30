@@ -6,13 +6,15 @@ body{
 }
 
 nav{
-    background-color: rgba(0, 0, 0, 0.815);
+    background-color: rgba(0, 0, 0, 0.747);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 3rem 2rem 3rem;
     /* ^ Doubt I have to ask to the sir  */
-    /* position: sticky;  */
+    position: sticky; 
+    top: 0%;
+    z-index: 1;
     /* position: fixed;
     top: 0;
     width: 100%; */
