@@ -66,8 +66,8 @@
 
 // ^ playing with the var and let in differant Scope using DMS 
 
-let x = 50;
-var y = 60;
+// let x = 50;
+// var y = 60;
 
 if(x){
     let x = 500;
@@ -82,23 +82,30 @@ console.log(y);  //6000
 
 // 2nd example 
 // ^ odd even numbers 
-let num = 10;
+// let num = 10;
 
-if(num % 2 == 0){
-    console.log("it is even number");
-}
-else{
-    console.log("it is odd number");
-}
+// if(num % 2 == 0){
+//     console.log("it is even number");
+// }
+// else{
+//     console.log("it is odd number");
+// }
 
-// * Extra operator === (it will check data and also the datatype)
+// // * Extra operator === (it will check data and also the datatype)
 
-console.log(false == 0);            // *it will check only the data
-console.log(false === 0);           //* it will check the data and the data-type 
+// console.log(false == 0);            // *it will check only the data
+// console.log(false === 0);           //* it will check the data and the data-type 
 
-console.log("100" == 100);          //true
-console.log("100" === 100);            //false 
+// console.log("100" == 100);          //true
+// console.log("100" === 100);            //false 
 
 
-console.log("1" == true);          //true
-console.log("1" === true);            //false 
+// console.log("1" == true);          //true
+// console.log("1" === true);            //false 
+
+
+
+// What will be the output of the following code?
+const x = 1;
+x = 2;
+console.log(x);
