@@ -1,0 +1,184 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+/* *-----------------------------------Navigation Bar --------------------- */
+
+nav{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-right{
+    width: 45%;
+}
+
+nav div > ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav div > ul > li > a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+#nav-right > ul{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+    margin-right: 4rem;
+}
+
+#nav-left > h2{
+    font-weight: 500;
+    padding-left: 4rem;
+    font-size: 1.7rem;
+}
+
+#nav-left > h2 > span{
+    color: red;
+}
+
+#home{
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *-----------------------------------MackBook Image Section --------------------- */
+
+#MackBook > img{
+    width: 100%;
+}
+
+
+/* *-----------------------------------Providing Section --------------------- */
+
+
+
+
+#Providing{
+    text-align: center;
+    margin-bottom: 10rem;
+    margin-top: 4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *-----------------------------------4 Symbols Section  --------------------- */
+
+#symbol-4{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* *-----------------------------------Main-features Section --------------------- */
+#Main-features{
+    text-align: center;
+}
+
+/* *-----------------------------------real-spaces Section  --------------------- */
+#real-spaces{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+#real-spaces > img{
+    /* width: 50%; */
+}
+
+/* *-----------------------------------symbol-3 Section --------------------- */
+
+
+
+
+
+
+
+/* *-----------------------------------Easily Section --------------------- */
+
+#Easily{
+    background-color: 
+    #ff4e37;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+
+
+
+
+
+
+/* *-----------------------------------saying-about Section --------------------- */
+#saying-about{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 4rem;
+}
+
+#saying-about-top{
+    /* background-color: rebeccapurple; */
+    text-align: center;
+}
+
+#saying-about-bottom{
+    width: 90%;
+    margin: auto;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+#saying-about-bottom  img{
+    border-radius: 100%;
+}
+
+#saying-about-bottom  h3{
+
+}
+
+
+#saying-about-bottom  p{
+    font-size: 0.7rem;
+}
+/* *-----------------------------------Multi-ul Section --------------------- */
+
+/* *-----------------------------------footer Section --------------------- */

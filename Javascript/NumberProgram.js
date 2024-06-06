@@ -155,4 +155,152 @@ while(num8 > 0){
 console.log("sum of the digits = " + sumOfDigits);  //*18
 
 
-// learned about the template literals that is bactics to do the interpolation between thw Strings  and also learn the inbuild Math Methods 
+// *learned about the template literals that is bactics to do the interpolation between thw Strings  and also learn the inbuild Math Methods 
+
+
+
+// ! Date 6 th june 2024
+
+// !return will By default value as the undefined 
+
+// *return will return some value and it will stop the execution 
+
+
+
+function abc(){
+    console.log("hi");
+    console.log("Hello");
+
+    return console.log("Bye");  //*return if the last line of the execution if all blocks 
+
+    console.log("Bye Bye");    // this is not acessible 
+}
+
+abc();
+
+function demo(){
+    let a = 10;
+    let b = 50;
+
+    console.log(a , b);
+
+    return "Kacha-Picha-return";  //*deafult value of the return is undefined 
+}
+
+// demo();
+
+console.log(demo());
+
+
+function demo2(a , b){    //*parameters 
+    console.log("Hi");
+    console.log(a , b);
+}
+
+demo2(50 , 30);                 // *arguments
+
+demo2(50 , 141);
+
+let container = demo2(500 , 600);
+
+
+console.log(container);   //*undefined because the default value is undefined 
+
+
+
+// !Function for odd and Even 
+
+function checkNumber(a){
+    if(a % 2 === 0){
+        console.log(a + " is the Even Number");
+    }
+    else{
+        console.log(a + " is the Odd Number");
+    }
+}
+
+// call the function
+checkNumber(10);
+
+checkNumber(15);
+
+// go on the HackerRank and solve the problems whether it is frontend or backend the problem solving is the most important 
+
+// ^ Function to get the sum of the digits 
+
+
+function sumOfTheDigits(a){
+    let sum = 0 ;
+
+    while(a > 0){
+        // get the last digit 
+        let lastDigit = a % 10;
+
+        sum += lastDigit;
+
+        a = parseInt(a / 10);   //*javascript will give the value in decimal by default hence take the int value use parseInt
+
+    }
+
+    return sum;
+}
+
+let sumOfDigit = sumOfTheDigits(19455);
+
+console.log("sum Of Digit = " + sumOfDigit);
+
+
+
+
+// ^ Reverse the given Number 
+
+function reverseNumber(a){
+    
+    
+    let newNumber = 0;
+
+    while(a > 0){ 
+
+        // *get the last digit 
+        let lastDigit = a % 10;
+
+        newNumber = newNumber * 10 +  lastDigit;
+
+        a  = parseInt(a / 10);
+    }
+
+    return newNumber;
+}
+
+
+let reversedNumber = reverseNumber(10457);
+
+console.log(reversedNumber);  // 75401
+
+
+
+// * Using the empty String also we can do but it will take more time complexity 
+
+
+function reverseNumber2(a){
+    
+    
+    let newNumber = "";   //*by taking the empty String
+
+    while(a > 0){ 
+
+        // *get the last digit 
+        let lastDigit = a % 10;
+
+        newNumber = newNumber  +  lastDigit;  //^ here concatination will happen 
+
+        a  = parseInt(a / 10);
+    }
+
+    return newNumber;
+}
+
+
+let reversedNumber2 = reverseNumber(10457);
+
+console.log(reversedNumber2);  // 75401
