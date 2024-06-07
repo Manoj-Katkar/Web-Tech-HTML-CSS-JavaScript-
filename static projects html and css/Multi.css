@@ -78,8 +78,19 @@ nav div > ul > li > a{
 
 #Providing{
     text-align: center;
-    margin-bottom: 10rem;
-    margin-top: 4rem;
+    margin-bottom: 6rem;
+    margin-top: 5rem;
+    color: rgba(0, 0, 0, 0.77);
+}
+
+#Providing h3{
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+#Providing h2{
+    font-size: 2.1rem;
+    font-weight: 500;
 }
 
 
@@ -100,18 +111,55 @@ nav div > ul > li > a{
 #symbol-4{
     display: flex;
     justify-content: space-evenly;
+    text-align: center;
 }
+
+#symbol-4 .fa-solid{
+    font-size: 2.5rem;
+    background-color: #ff4e37;
+    padding: 1.5rem;
+    color: white;
+    border-radius: 100%;
+}
+
+#symbol-4 .fa-regular{
+    font-size: 2.5rem;
+    background-color: #ff4e37;
+    padding: 1.5rem;
+    color: white;
+    border-radius: 100%;
+}
+
+#symbol-4 h3{
+    margin-top: 6rem;
+    font-weight: 500;
+}
+
+
 
 /* *-----------------------------------Main-features Section --------------------- */
 #Main-features{
     text-align: center;
+    margin-top: 7rem;
+}
+
+
+
+#Main-features > h2{
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+#Main-features p{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
 }
 
 /* *-----------------------------------real-spaces Section  --------------------- */
 #real-spaces{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 8rem;
+    margin-top: 5rem;
     margin-bottom: 8rem;
 }
 
@@ -121,9 +169,75 @@ nav div > ul > li > a{
 
 /* *-----------------------------------symbol-3 Section --------------------- */
 
+#symbol-3{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+    /* background-color: rebeccapurple; */
+}
+
+#symbol-3-1{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: yellow; */
+}
+
+#symbol-3-2{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: yellow; */
+}
+
+#symbol-3-3{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: yellow; */
+}
+
+.fa-rocket{
+    font-size: 2.5rem;
+    background-color: #ff4e37;
+    padding: 1.5rem; 
+    color: white;
+    border-radius: 100%;
+}
 
 
+.fa-camera{
+    font-size: 2.5rem;
+    background-color: #ff4e37;
+    padding: 1.5rem;
+    color: white;
+    border-radius: 100%;
+}
 
+#symbol-3-3 .fa-heart{
+    font-size: 2.5rem;
+    background-color: #ff4e37;
+    padding: 1.5rem;
+    color: white;
+    border-radius: 100%;
+}
+
+/* *Descendant Selector */
+
+#symbol-3 p{
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+}
+
+#symbol-3 h3{
+    font-weight: 500;
+    font-size: 1.3rem;
+}
 
 
 
@@ -135,8 +249,30 @@ nav div > ul > li > a{
     text-align: center;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    color: rgba(255, 255, 255, 0.832);
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    margin-top: 5rem;
 }
 
+#Easily h2{
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+#Easily p{
+    padding-bottom: 2rem;
+}
+
+
+#Easily button{
+    padding:  0.4rem 0.5rem 0.4rem 0.5rem;
+    background-color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 15px ;
+    color: rgba(0, 0, 0, 0.811);
+}
 
 
 
@@ -150,12 +286,27 @@ nav div > ul > li > a{
     flex-direction: column;
     background-color: white;
     margin-bottom: 4rem;
+    margin-top: 4rem;
 }
 
 #saying-about-top{
     /* background-color: rebeccapurple; */
     text-align: center;
+    color: rgba(0, 0, 0, 0.778);
 }
+
+#saying-about-top > h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+#saying-about-top > h2{
+    font-size: 2.1rem;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+
 
 #saying-about-bottom{
     width: 90%;
@@ -164,21 +315,141 @@ nav div > ul > li > a{
     display: flex;
     justify-content: space-between;
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 #saying-about-bottom  img{
-    border-radius: 100%;
+    border-radius: 15px;
 }
 
 #saying-about-bottom  h3{
-
+    font-weight: 500;
+    font-size: 1.4rem;
 }
 
 
 #saying-about-bottom  p{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
 }
-/* *-----------------------------------Multi-ul Section --------------------- */
+/* *-----------------------------------Multi Section --------------------- */
+
+#Multi-ul{
+    background-color: #2d2d2d;
+}
+
+
+#Multi-Content{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.805);
+    line-height: 2rem;
+    padding: 4rem 1rem 4rem 1rem;
+
+}
+
+#Multi-Content h2{
+    padding-bottom: 2rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+#Multi-2{
+    line-height: 3rem;
+}
+
+#Multi-3{
+    line-height: 3rem;
+}
+
+.fa-brands{
+    background-color: black;
+    padding: 0.5rem;
+    margin-right: 0.8rem;
+    border-radius: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* *-----------------------------------footer Section --------------------- */
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #111111;
+    padding: 1.5rem 0.5rem;
+
+}
+
+#footer-left{
+    width: 30%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 2rem; */
+}
+
+#footer-right{
+    width: 40%;
+    /* background-color: magenta; */
+    margin-right: 1.2rem;
+}
+
+#footer-right ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+#footer-right a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.796);
+}
+
+#footer-left h2{
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0px;
+    margin: 0px;
+    color: rgba(255, 255, 255, 0.784);
+}
