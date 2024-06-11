@@ -88,3 +88,135 @@ let arrowFunction = () => {
 arrowFunction();
 
 //! Note : we cannot access  the Arrow function before declaration because inside the variable it is having the undefined we cannot invoke the undefined 
+
+
+// ! 11/06/24 More About the Functions 
+
+function result(){
+
+}
+// ^ to perform addition 
+
+function add(a , b){
+    console.log("Addition is : " + (a+b));
+}
+
+add(10 , 20);
+
+// *console is object and log is the method 
+
+
+
+
+
+// !higher order function : 
+/*
+* if a function accepting another function as the argument or returning another function that is known as 
+* Higher Order Function(HOF) 
+*/
+
+
+// !call-back function
+// *A function which is passed as the argument to another function that is call-back function
+
+
+// *Examples 
+
+function abcd(a , b , diff){    //*HOF 
+    console.log(diff);    //* it will have the entire sub function 
+    diff(a , b);
+}
+
+
+function sub(a , b){                 //*call-back function
+
+    console.log(a - b);
+}
+
+abcd(100 , 50 , sub);
+
+
+// ?Another Example 
+
+function result1(a , b){
+
+    return mul(a , b);   //*it is returning another function hence it is also HOF
+}
+
+function mul(x , y){
+    console.log(x * y);
+}
+
+result1(10 , 60);
+
+
+
+
+// !Nested Function 
+// *Function inside Another Function is Nested Function 
+
+let a = 50; 
+
+function nestedOuter(){
+
+    console.log(a);
+
+    var b = 70;
+
+    nestedInner();   //*because of the hosting we can before its declared 
+
+    function nestedInner(){
+        console.log("NestedInner Function : " + a , b);  // 50 , 70
+
+        let c = 80;   //*I can access it within the inner function ifself 
+    }
+
+    // call the inner function
+    // nestedInner();
+
+    // console.log(a);  //*50
+    // console.log(b);  //*70
+    // console.log(c);  //*Referance Error Not defined cannot access inner variable to outer function
+
+}
+
+nestedOuter();
+
+
+
+
+
+
+
+// ! Scope Chaining (Very IMP Topic) it is Mechanism
+// ?(How it will look for the varaibles)
+// *the process of loking for varaibles from the inner to their parent one by one this process is know as Scope Chaining 
+// * if it will find the varaible for any parent scope then it will stop there only 
+// *first it will search the varaible in innermost Scope , if it is not there it will look for parent Scope , if it is not in parent Scope Same Way it will look till outerMost Scope that is Global Scape , 
+// *then also it is not there then we will get the referance error means it is not defined itself 
+
+
+// ^ Example :
+
+
+let num1 = 10;
+
+function outerFun(){
+
+    let num2 = 50;
+    let num1 = 400;
+
+    function innerFun(){
+        let c = 100;
+        let b = 800;
+
+        console.log(num1);   //400
+        console.log(b);       // 800
+        // console.log(d);  // error Not Defined 
+     }
+
+    innerFun();
+}
+
+outerFun();
+
