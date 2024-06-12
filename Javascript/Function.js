@@ -53,7 +53,7 @@ demo2();
 
 
 
-// !Immediatelly Invoke Function Execution (IIFE)
+// !Immediatelly Invoke Function Expression (IIFE)
 // when we want to execute only one time then use IIFE
 // * Here two brackets will be there   
 // () = to write the function body 
@@ -220,3 +220,169 @@ function outerFun(){
 
 outerFun();
 
+
+//* Date : 12/06/24
+// ! What is Lexical Scope
+
+function outer1(){
+
+    let a = 10;
+    let b = 50;
+    // console.log(a , b , c);  //*10 , 50 , not defined referance error 
+
+}
+
+
+function outer2(){
+    let c = 1000;
+
+    function inner(){
+        console.log(c);  //*1000
+    }
+
+    inner();
+
+    outer1();
+}
+
+outer2();
+
+// !Lexical Scope : 
+/*
+                *it means organizing and Accessing variables which are controled by functions or block 
+                *of codes based on where we are writing block of code not on where they got called 
+                *or executing */
+
+
+
+                
+//!Closure : Closure will be created in inner function for outer Function 
+        // the values or variables that we are accessing in the inner function that only will get stored in the Closure 
+
+// *Defination of Closure :
+                        /*
+                        *closure is a special feature in javascript it will remaimber outer function variable  
+                        *in inner function even though outer function stop executing
+                        *Closure will be created in inner function for outer function variables 
+                        *which are getting accesed in the inner function  */
+
+
+
+
+//* Examples of the Closure 
+
+function outer2(){
+    let a = 50;
+    let b = 100;
+
+    function inner(){
+        console.log(a , b);
+    }
+}
+outer2();
+
+
+
+
+// !Generator Function :
+                // *if we want to stop the function and then resume its execution then we have to use the generator function
+
+// Syntax : use * after the function keyword 
+
+function* gen(){
+    console.log("Hiii");
+
+    yield 1000;   //*this will pause the execution of the function
+
+    console.log("Byee");
+
+    yield 10;
+
+    console.log("Khatam Tata Bye Bye");
+
+    yield 152;
+}
+
+// gen();
+console.log(gen);
+let generatorObject = gen();
+console.log(gen());    //*here we will get the return default type is generator object 
+
+// it is having the inbuit methods 
+// *to resume the function we have to use the next() method 
+console.log(generatorObject.next());  //? value 1000 , done : false
+
+/*
+*next(): it will return the one object it have the below properties in that object 
+*done : means the function is completelly executed or not 
+*value = means the value that you have put it for the yield */
+
+
+// not to print the Bye call the again using the next method 
+console.log(generatorObject.next());    //? value 10 , done : false
+
+// not to print the Khatam Tata Bye Bye call the again using the next method 
+console.log(generatorObject.next());    //? value 152 , done : true
+
+// generatorObject.next();
+
+/*
+* Notes : Generator functions are used to pause and resume the function
+*        yield  : it is the keyword used to pause the function
+*        next() : it is the method which is resume the function
+*        generator function will by-default return generator Object (it will have some inbuild methods)
+ */
+ 
+
+
+// learned Lexical Scope , Closure , generator function  there are one method next() and yield keyword , constructor and this keyword 
+
+
+
+// !Constructor 
+
+//! this : it will always represent for the object 
+
+var num12 = 20;
+console.log(num12);
+
+// *using the window object 
+
+console.log(window.num12);
+
+function xuv(){
+    console.log("Hi");
+}
+
+// xuv();
+
+console.log(window.xuv());
+
+console.log(this);   //* it represent the current object that is window 
+
+function youtube(){
+    console.log(this);               //* it represent the current object that is window 
+}
+youtube();
+
+
+
+
+
+// create the one Object 
+
+let obj1 = {
+    team : "india",
+    players : 15,
+    thala : function(){
+        console.log(this);  // * here this represent the obj1 
+    }
+    ,
+    names : function(){
+        console.log("Manoj");
+    }
+}
+
+obj1.thala();
+
+obj1.names();
