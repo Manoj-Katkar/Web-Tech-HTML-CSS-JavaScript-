@@ -386,3 +386,38 @@ let obj1 = {
 obj1.thala();
 
 obj1.names();
+
+
+// !Constructor : it is used to create objects 
+
+let obj3 = {
+    name : "Manoj",
+    age : 23
+}
+
+
+
+let obj4 = {
+    name : "Rahul",
+    age : 21
+}
+
+
+
+
+let obj5 = {
+    name : "Manya",
+    age : 20
+}
+
+
+
+let obj6 = {
+    name : "Raj",
+    age : 18
+}
+
+
+
+
+
