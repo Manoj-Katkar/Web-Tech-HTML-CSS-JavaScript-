@@ -211,6 +211,90 @@ console.log(Object.isFrozen(obj6));
 console.log(Object.isSealed(obj6));
 
 
+// ^Notes
+// to get the All the keys of the object in the Array format 
+// Object.keys();           //*return All keys in Array format 
+// Object.values();         //*return All values in Array format 
+// Object.entries();        //*return All keys and values in 2D Array format 
+// Object.freeze();         //*it will freeze the Object (Not able to change the values of the keys also)
+// Object.seal();           //*it will seal the Object (we can able to change the values of the keys in seal)
+// Object.isFrozen();       //* here it will check whether the Object if frezze or Not  (return the boolean values)
+// Object.isSealed();        //* here it will check whether the Object if sealed or Not 
+
+// ! IMP Note : All Frozen Objects Are sealed but vice-versa it is Not 
+
+
+
+
+// ! How to merge Two Objects in Javascript 
+
+let demo1 = {
+    name : "Kacha-picha",
+    age : 21
+}
+
+let demo2 = {
+    name : "papu",
+    age : 50,
+    trophies : 22
+
+}
+
+// ^ Using the assign() method we can merge the both the Object 
+// ~Assigning the demo2 properties to the demo1 
+
+// Object.assign(demo1 , demo2);
+
+// console.log(demo1);
+
+// *Spread Operator : it is used to copy the elements (it will create the one object )
+// console.log({...demo1 , ...demo2});   //* it will not modify the original Object 
+
+let mergedObject  = {...demo1 , ...demo2};
+
+console.log(mergedObject);
+
+console.log(demo1);
+
+
+// !Object Destructuring : (VIMP Topic)
+/**
+ * * {} = it will represent the Object Destructuring
+ * * [] = it will represent the Array Destructuring
+ */
+
+
+let food = {
+    name:"biryani",
+    type : "chicken",
+    price : 180
+}
+
+let {name , type , price} = food;
+
+console.log(food.name);
+
+// ^ without using the dot operator
+
+console.log(name);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
