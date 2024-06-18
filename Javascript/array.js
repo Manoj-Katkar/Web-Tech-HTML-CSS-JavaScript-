@@ -322,3 +322,349 @@ let productRatingGood = productArray.filter((element) => {
 console.log(productRatingGood);
 
 // learned about the all iterating methods for Array in js that is forEach , map , filter , find all are HOF
+
+
+
+// !reduce method :
+/**
+ * *it will also return the one value 
+ * * it will start from left to right 
+ * * its call back will have the 4 parameters 
+ *  *(accumalater_value , current_value , current_index , original_array)
+ * * accumalater_value : it is first value of the Array element 
+ * * current_value : it will start from the 1st index value 
+ */
+
+console.log("reduce method");
+let numbersArray = [10 , 20 , 30 , 40 , 50];
+
+let mulNumbers = numbersArray.reduce((accumalater_value , current_element , current_index , EntireArray) => {
+        console.log(accumalater_value);
+        return (accumalater_value*current_element);
+} , 50);
+
+console.log(mulNumbers);
+
+
+// !reduceRight() method:
+/**
+ * *it will also return the one value 
+ * * it will start from right to left 
+ * * its call back will have the 4 parameters 
+ *  *(accumalater_value , current_value , current_index , original_array)
+ * * accumalater_value : it is first value of the Array element 
+ * * current_value : it will start from the 1st index value 
+ */
+
+
+let sumOfNumbers = numbersArray.reduceRight((accumalater_value , current_element) => {
+    console.log(current_element);
+    return accumalater_value + current_element;
+});
+
+console.log(sumOfNumbers);
+
+
+// !every method
+/**
+ * *for the verification we will use every method 
+ * *it will check for the every element statisfy the condition return the true 
+ * *else it will return the false value 
+ * * its call-back will also take the three parameters 
+ * * (element , index , original_array);
+ */
+
+console.log("--------------------------every method ------------------------------");
+
+let booleanValue = numbersArray.every((element) =>{
+    if(element % 10 == 0){
+        
+        return element;
+    }
+});
+
+console.log(booleanValue);
+
+
+
+
+
+// !some method
+/**
+ * *
+ * *it will check for the one element statisfy the condition then return the true 
+ * *else it will return the false value 
+ */
+
+console.log("--------------------------some method ------------------------------");
+
+let booleanValueSome = numbersArray.some((element , index , array) =>{
+    if(element % 20 == 0){   //*here element 20 , 40 are satifying the call back function condition it will return the true 
+        
+        return element;
+    }
+
+    console.log(element , index , array);
+});
+
+console.log(booleanValueSome);
+
+
+
+
+
+
+
+
+// !sorting methods :
+/**
+ * *Ascending and Descending order 
+ * *By default sort() will sort the data based on the first digit , first character 
+ */
+
+let ipl1 = ["mi" , "csk" , "kkr" , "rcb"];
+
+ipl1.sort();
+
+console.log(ipl1);
+
+
+let num = [5 , 2 , 4 , 1];
+
+num.sort();
+
+console.log(num);
+
+let numbers = [1 , -10 , 2 , 5 , 20 , 6];
+
+// console.log(numbers.sort());
+
+
+console.log("using the sorting logic for Ascending order ");
+
+numbers.sort((A , B) => {
+    // A : means second value 
+    // B : prevoius  value 
+     console.log(A , B);
+
+     return (A-B);
+});
+
+console.log(numbers);
+
+
+
+
+console.log("using the sorting logic for Descending order ");
+
+numbers.sort((A , B) => {
+    // A : means second value 
+    // B : prevoius  value 
+     console.log(A , B);
+
+     return (B - A);
+});
+
+console.log(numbers);
+
+
+
+
+// !to get the index of the Array element it is similar to the string method 
+
+numbersArray = [10 , 20 , 30 , 40 , 50];
+
+let numbersElementIndex = numbersArray.indexOf(20);
+
+console.log(numbersElementIndex);
+
+
+
+// !lastIndexOf() : 
+
+let lastIndexOfElement = numbersArray.lastIndexOf(40);
+
+console.log(lastIndexOfElement);
+
+
+// !to merge the two Array 
+// ^using concat() method 
+
+let mergedArray = numbersArray.concat(ipl1);
+
+console.log(mergedArray);
+
+
+
+// !slice method :
+/**
+ * *used to extract the part of the Array 
+ */
+
+let partOfArray = numbersArray.slice(1 , 4);
+
+console.log(partOfArray);
+
+
+
+// !to convert the Array to String (IMP)
+// ^ using toString method 
+
+/**
+ * * it will return the String 
+ * * but it will not modify the original Array 
+ * * it will not accept the any argument here 
+ */
+
+// ^ using toString method 
+
+
+let games = ["cricket"  , "kabaddi" , "Kho-Kho"];
+
+let gamesString = games.toString();
+
+console.log(gamesString);
+
+// console.log( games);
+
+
+
+// ^ using join method 
+/**
+ * *it will accept the argument inside the join() condition 
+ */
+let gamesString1 = games.join(" ");
+
+console.log(gamesString1);
+
+
+
+// !All notes again by Sir for Array Methods 
+
+// & Methods will modify the original Array :
+/**
+ * * .pop() : it will remove the Array element from the last 
+ * 
+ * * .push(argument1 , argument2) : it will add the element to the Array at last 
+ * 
+ * * .shift(): it will remove the element from the start from the Array 
+ * 
+ * * .unshift(argument1 , argument2) : it will add the Array elements to the front 
+ * 
+ * * .splice(starting_index , elementCount that wanted to remove , elements that wanted to add) : it will remove and also add the elements in the Array 
+ * 
+ * * .reverse()  : it will reverse the given Array itself
+ * 
+ * * .sort() : it is the HOF (used to arrange the data in Ascending or descending order)
+ * *           its call back will take the two arguments 
+ * *            that are     
+ * *           (A : means second value  B : previous  value )  
+ * !Note :  above is used to sort the two digit or more digit numbers 
+ * !           if we will use only sort() method then it will sort based on the first character or first number 
+ *          
+ */
+
+
+
+
+
+// !Methods to iterate over the Array (it will not modify the original Array )
+// ^ iterating all methods are the HOF
+/**
+ * & 1)forEach() : it will iterate All the elements of the Array 
+ * *              return type is void means undefined 
+ * 
+ * * Syntax :   forEach((arrayElement , arrayIndex , originalArray) => {
+ * 
+ * *            })
+ * 
+ * 
+ * 
+ *  & 2)map() : it will iterate All the elements of the Array 
+ * *              return type is copy of the Array with optional modified elements 
+ * 
+ * * Syntax :   map((arrayElement , arrayIndex , originalArray) => {
+ * 
+ * *            })
+ * 
+ * 
+ * 
+ *  & 3)filter() :   it will iterate All the elements of the Array 
+ * *                return type is array with condition statisfied elements of the call back function 
+ * 
+ * * Syntax :   filter((arrayElement , arrayIndex , originalArray) => {
+ * 
+ * *            })
+ * 
+ * 
+ *  & 4)find() :   it will iterate All the elements of the Array 
+ *   *              but it will stop iterating once the condition satisfied 
+ * *                return type is only one  element which satisfied condition (single value)
+ * 
+ * * Syntax :   find((arrayElement , arrayIndex , originalArray) => {
+ * 
+ * *            })
+ * 
+ * 
+ * 
+ * & 5)reduce() :   it will iterate All the elements of the Array 
+ * *                 in first iteration accumalater value is first element 
+ * *                  from second iteration accumalater value is returned value 
+ * *                  return type is only one  value that is the final value of the accumalater 
+ * 
+ * * Syntax :   reduce((accumulater , currentArrayElement , arrayIndex , originalArray) => {
+ * 
+ * *                     return (operation with accumalater with array element)
+ * 
+ * *            } , accumalater_initial_value_we can pass );
+ * 
+ * 
+ * 
+ *   & 6)reduceRight() :      it is similar to reduce but iterate from the right to left 
+ * *                            in first iteration accumalater value is first element from the right side 
+ * *                            from second iteration accumalater value is returned value 
+ * *                        return type is only one  value that is the final value of the accumalater 
+ * 
+ * * Syntax :   reduce((accumulater , currentArrayElement , arrayIndex , originalArray) => {
+ * 
+ * *                     return (operation with accumalater with array element)
+ * 
+ * *            } , accumalater_initial_value_we can pass );
+ * 
+ * 
+ */
+
+
+// !Convert the Array to String methods 
+
+/**
+ * * 1) toString(): it will convert the Array to String but it will not accept the any arguments 
+ * 
+ * * 2) join() : it will also convert the Array to String but it will accept the optional argument 
+ * 
+ */
+
+// ! Similar to String Methods (4 Methods)
+
+/**
+ * * 1) indexOf() 
+ * * 2) lastIndexOf() 
+ * * 3) concat(): 
+ * * 4) slice():
+ */
+
+
+// !Array methods with boolean values which are also HOF (2 Methods)
+
+/**
+ * * 1)every() : here All elements should satisfy the condition of the call back function then it will return true else it will return false 
+ * 
+ * 
+ * 
+ * * 2) some() : here any-One elements should satisfy the condition of the call back function then it will return true else it will return false 
+ */
+
+
+
+
+
