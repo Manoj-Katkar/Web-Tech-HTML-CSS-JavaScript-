@@ -86,4 +86,66 @@ localStorage.removeItem("obj3");  //*here the object with key obj3 will be remov
 
 // localStorage.clear();
 
-// learned about the local storage methods all methods notes are there in the storage2.js file 
+// learned about the local storage methods all methods notes are there in the storage2.js file
+
+
+// !Learning the session Storage 
+// ^ session storage is only for that session once the that tab is closed then that data will be gone 
+
+let a = "I am string";
+
+let obj = {
+    product : "AC",
+    price : "20000"
+}
+
+let arr = [1 , 2 , 3 , 4 , 5];
+
+// sessionStorage.setItem("str" , a );
+
+
+let jsonObj = JSON.stringify(obj);
+
+sessionStorage.setItem("obj" , jsonObj);
+
+// now lets add the array to the session storage 
+
+let jsonArray = JSON.stringify(arr);
+
+sessionStorage.setItem("arr" , jsonArray);
+
+// !usecase of the session storage : 
+// ^to create the capcha 
+// ^to create the otp
+
+
+// !now acess the value of the session storage 
+
+let objInStringFormat = sessionStorage.getItem("obj");
+
+console.log(objInStringFormat , typeof objInStringFormat);
+
+// !now to get the object in the javascript original format 
+
+let convertedObj = JSON.parse(objInStringFormat);
+
+console.log(convertedObj , typeof convertedObj);
+
+// !now get the Array from te session storage 
+
+let arrFromSession = sessionStorage.getItem("arr");
+
+// now convert it into the original Array format 
+
+let convertedArray = JSON.parse(arrFromSession);
+
+console.log(convertedArray);
+
+
+
+// !let remove the one object that is Array 
+
+sessionStorage.removeItem("arr");
+
+// !to clear the all storage use .clear() method 
+
