@@ -103,6 +103,62 @@ let deepObject = JSON.parse(strobj);
 console.log(deepObject);
 
 
+//Notes 
+
+/**
+ * !value copy : 
+ * *                it is going to be the only for the primitive datatype 
+ * 
+ * !referance copy : 
+ * *                it will not copy the value it will copy the referance address 
+ * ^Example : Object and Array 
+ * 
+ * ^disadvantages : 
+ *  *               if we do the changes for one object it will affect the other object which is having the same referance also 
+ * *                
+ * 
+ * 
+ * 
+ * !shallow copy : 
+ * *                it will create new object address and values will be copied for only first level properties 
+ * *                for nested object it will copy the referance address only 
+ * !Syntax :
+ * *       let obj1 = {
+ * *                name : "Manoj"
+ * *        }
+ * 
+ * *      let obj2 = {...obj1}
+ * 
+ *! Note : we can achieve the shallow copy by using the spread opearator 
+
+ *^disadvantages : if we do changes for nested objects that will affect for other object which is having same nested object referance in another object 
+
+ *!deep copy : 
+ **             it will create the new object with new nested referance in the memory
+ 
+  * !Syntax :
+ * *       let obj1 = {
+ * *                name : "Manoj"
+ * *        }
+ * 
+ * *      let obj2InString = JSON.stringyfy(obj1);
+ * *       let obj2DeepCopy = JSON.parse(obj2InString);
+ */
+
+
+
+
+
+
+// !DOM : (Document Object Model): 
+
+/**
+ * !DOM : 
+ * *        it is programming interface given by the browser to access HTML elements in javascript
+ * *        by using the DOM we can access  , modify , style the elements dynamically 
+ * *        here the accessing the elements are noting but as an the node  
+ * 
+ */
 
 
 
