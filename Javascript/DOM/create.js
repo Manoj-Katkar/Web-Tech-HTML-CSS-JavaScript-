@@ -83,41 +83,41 @@
 
 // console.log("From Node List " , firstH2FromNodeList);
 
-let anchorTag = document.querySelector("a");
+// let anchorTag = document.querySelector("a");
 
 
-console.log(anchorTag);
+// console.log(anchorTag);
 
 // !How to access the any attribute and add the attributes in js 
 
-anchorTag.href = "https://chatgpt.com/";
+// anchorTag.href = "https://chatgpt.com/";
 
-anchorTag.target = "_blank";
+// anchorTag.target = "_blank";
 
 //^ access the input tag 
 
-let inputTag = document.querySelectorAll("input");
+// let inputTag = document.querySelectorAll("input");
 
-console.log(inputTag[0]);
+// console.log(inputTag[0]);
 
-inputTag[0].type = "password";
+// inputTag[0].type = "password";
 
-console.log(inputTag[0].type);
+// console.log(inputTag[0].type);
 
 // !Access the image using the tagName 
 
-let image = document.getElementsByTagName("img");
+// let image = document.getElementsByTagName("img");
 
 // image[0].src = "./images/dhoni2.jpeg";
 
-image[0].alt = "please wait it is loading";
+// image[0].alt = "please wait it is loading";
 
-console.log(image[0]);
+// console.log(image[0]);
 
 
 // !now how to modify the content inside the html element using the javascript 
 
-let headH1 = document.getElementsByClassName("learn-dom-h1");
+// let headH1 = document.getElementsByClassName("learn-dom-h1");
 
 // ! to modify the content or add elements we will use the below properties 
 
@@ -125,11 +125,11 @@ let headH1 = document.getElementsByClassName("learn-dom-h1");
 // ^innerText : it will allow the only to change the text 
 
 
-headH1[0].innerText = "Hi I am From JS changed ";  //*here the content will be display as it is 
+// headH1[0].innerText = "Hi I am From JS changed ";  //*here the content will be display as it is 
 
 // headH1[0].innerHTML = "<p>from paragraph</p>"    //*here it will create the p and inside that it will display 
 
-console.log(headH1[0]);
+// console.log(headH1[0]);
 
 
 
@@ -137,7 +137,7 @@ console.log(headH1[0]);
 
 
 // !lets create the some dynamic content 
-let a = 0;
+// let a = 0;
 
 // setInterval(() => {
 //     console.log(a);
@@ -150,22 +150,97 @@ let a = 0;
 
 // !how to stop the interval then store the function inside the one variable 
 
-let inter = setInterval(() => {
-    console.log(a);
-    a++;
+// let inter = setInterval(() => {
+//     console.log(a);
+//     a++;
 
-    headH1[0].innerHTML = a;
+//     headH1[0].innerHTML = a;
 
-    console.log(headH1[0]);
+//     console.log(headH1[0]);
 
-    // !to stop the interval 
+//     // !to stop the interval 
 
-    if(a == 10){
-        clearInterval(inter);
-    }
+//     if(a == 10){
+//         clearInterval(inter);
+//     }
 
-} , 1000);
+// } , 1000);
 
 
 // learned about DOM , Accessing html elements in js ,HTMLCollection , NodeList , updating text or html using innerHtml and innerText , also how to stop the interval using clearInterval()
+
+
+// !Date  : 27/06/24
+
+
+//! HTML collection : it will be live updated 
+// *                    changes will be updated live 
+
+
+//! NodeList :   it is static 
+/**
+ * *               here I can able to iterate on the NodeList 
+ * *                it will get updated but newlly we have to access it i=once we added or deleted some elements in html 
+ */
+
+
+// let div3 = document.querySelector("#container3");
+
+// access the all the h1 
+// let tagHead = document.getElementsByTagName("h1");
+
+// let queryHead1 = document.querySelectorAll("h1");
+
+// console.log(tagHead);
+
+// console.log(queryHead1);
+
+// let head5 = document.createElement("h1");
+
+// head5.innerHTML = "head 5 it is";
+
+// console.log(head5);
+
+// append the child head 5 
+
+// div3.appendChild(head5);
+
+//! Now accessing the node list to check whether it is updated or not 
+// ^it will get updated but newlly we have to access it because it is static 
+// ^
+// let queryHead2 = document.querySelectorAll("h1");
+
+
+// console.log(tagHead , queryHead1);  
+
+// console.log(tagHead , queryHead2);
+
+
+// !lets itearate over the queryHead2
+
+// queryHead2.forEach((element , index , originalNodeList ) => {
+
+//     console.log(element);
+
+// });
+
+
+
+
+
+// !how to convert the NodeList to array
+
+// let queryNodeArray = Array.from(queryHead2); //* it will take the each Nodelist value as the one array element 
+
+// console.log(queryNodeArray);
+
+// let CollectionArray  = Array.from(tagHead);
+
+// console.log(CollectionArray);
+
+// let CollectionArrayUsingOf  = Array.of(tagHead);  //*it will take the all collection values as the one element only 
+
+// console.log(CollectionArrayUsingOf);
+
+
 
