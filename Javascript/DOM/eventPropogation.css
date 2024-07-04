@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* content should take the padding from the original box width and height take it from that  */
+    box-sizing: border-box;  
+}
+
+nav{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    list-style-type: none;
+    /* color:white; */
+    display: flex;
+
+}
+
+li{
+    padding: 1rem;
+    color: red;
+}
+
+li:hover{
+    background-color: white;
+}
+
+.newbg{
+    background-color: hotpink;
+}
+
+.p-display{
+    display: none;
+}
