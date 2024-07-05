@@ -12,16 +12,18 @@ let body = document.querySelector("body");
 
 // !Always body will have the only the content height only hence on the entire viewport height of the screen in the body the body event will not get triggred 
 
-// *DOM 3 Stages of Event Propogation
+// *DOM 3 phases of Event Propogation
 /**
- * ^ 1) capturing  : till searching that element in the dom tree 
- * ^ 2) Target     : for that targeted execute its call back function 
- * ^ 3) bubbling  : it will go back and parents events will get triggred to stop it provide the stop propogation
+ * ^ 1) event capturing  : till searching that element in the dom tree 
+ * ^ 2)event  Target     : for that targeted execute its call back function 
+ * ^ 3)event bubbling  : it will go back and parents events will get triggred to stop it provide the stop propogation
  */
 
 // *document is stored in the window object 
 
-//* event propogation : how it will move in the window till it is getting triggred that is event propogation
+// !Defination of the event propogation 
+
+//* event propogation :In JavaScript, event propagation is the mechanism that determines the order in which elements in the DOM tree receive and respond to events.
 
 
 // *addEventListner will have the one more parameter that is capture = it will have by default value as false but after capturing stage of the dom it will become true 
@@ -91,10 +93,32 @@ let layOut = liList[1];
 
 //^ third parameter of addEventListener = (capture value) = false
 
-// !(capture value) = it will become true when we have successfully captured means searched that element 
+// !capture value : it represents whether you need capture the event in capture phase or not means its call back should execute or not 
+
+// !(capture value) = 1)it will become true when we have successfully captured means searched that element 
+//! 2)it is optional but it can change the sequence of the event execution 
+
+
+// &now if I want to see in which phase the event is got triggred each event then use = event.eventPhase
+
+// ^event.eventPhase it will represent by the numbers as 1 , 2 , 3 
+
+/**
+ * *1 = capturing phase 
+ * *2 = Target phase 
+ * *3 = bubbling phase 
+ */
+
+
+//^ to get original target = event.target (means the element where I have to go that is going to be the fixed )
+// ^to get the current target  = event.currentTarget;
 
 
 
+// !event.target.dataset = 
+//* it will create the map of the custom attributes we have for the targetted html element in DomMap format 
+
+// to get the current index event.target.dataset.index
 
 //! child to parent execution  (default value of the capture value = false)
 
