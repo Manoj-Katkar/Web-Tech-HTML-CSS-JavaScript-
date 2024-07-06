@@ -15,10 +15,10 @@
  * *           2)remove() : remove the className 
  * *           3)toggle()  : to add and remove className both it will do for the targeted html element 
  * *           4) replace : it will replace the className takes two arguments  replace( old className , new className)
- *              
  * 
- * !DOM Events : 
- *              *click 
+ * 
+ * !DOM Events :
+ *              *click
  *              *dblclick
  *              *mouseover
  *              *mouseout
@@ -51,10 +51,10 @@
  * 
  * 
  * 
- * !addEventListner(): 
- * *                    it will accept the three arguments 
- * *                     1)type of event 
- * *                     2)call - back function 
+ * !addEventListner():
+ * *                    it will accept the three arguments
+ * *                     1)type of event
+ * *                     2)call - back function
  * *                     3)capture value (default value is false)
  * 
  * !DOM  : it is also the programming interface for interact with the html elements 

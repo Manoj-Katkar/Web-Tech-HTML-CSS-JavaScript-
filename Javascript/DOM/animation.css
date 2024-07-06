@@ -1,0 +1,90 @@
+body{
+    background-color: aqua;
+    
+    /* how to call the animation function  */
+    /* animation: nameOfFunction , duration , repeatation ; */
+    /* animation: bg 100s infinite; */
+    /* animation: bg 10s 4; */
+}
+
+/* *for the animation use below syntax  */
+
+@keyframes bg{
+    /* values in the percentage are with respect to the duration  */
+    0%{
+        background-color: red;
+    }
+    20%{
+        background-color: black;
+    }
+    40%{
+        background-color: chocolate;
+    }
+    60%{
+        background-color: pink;
+    }
+    80%{
+        background-color: blue;
+    }
+    100%{
+        background-color: maroon;
+    }
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.fa-heart-pulse{
+    
+    color: rgb(255, 0, 0);
+
+    animation: dil 2s infinite linear;
+}
+
+/* to make the heart as the heart bit  */
+
+@keyframes dil{
+    /* 0%{
+        opacity: 1;
+        font-size: 4rem;
+    }
+    25%{
+        opacity: 0;
+        font-size: 1.5rem;
+    }
+    50%{
+        opacity: 1;
+        font-size: 4rem;
+    }
+    75%{
+        opacity: 0;
+        font-size: 1.5rem;
+    }
+    100%{
+        opacity: 1;
+        font-size: 4rem;
+    } */
+
+
+    /* *we can use the above approach or the below approach two ways are there  */
+
+    from{
+        opacity: 0.2;
+        font-size: 0.5rem;
+    }
+    to{
+        opacity: 1;
+        font-size: 2rem;
+    }
+    
+}
+
+
+
+
+
+
