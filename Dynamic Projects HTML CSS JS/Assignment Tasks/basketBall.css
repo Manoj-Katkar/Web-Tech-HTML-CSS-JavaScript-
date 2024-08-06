@@ -1,0 +1,186 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    /* animation: bg 6s infinite linear; */
+}
+
+body > h1{
+    text-align: center;
+    color: red;
+    margin-top: 1rem;
+}
+
+.mainTop  img{
+    width: 30%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mainTop h1{
+    margin: 1rem 0rem 0.5rem 0rem;
+    font-size: 2.5rem;
+}
+
+.mainTop h2{
+    font-size: 2.7rem;
+}
+
+.mainTop p{
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: darkblue;
+}
+
+section .mainTop button{
+    display: inline-block;
+    width: 19%;
+    height: 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 7px;
+    margin-top: 1rem;
+    background-color: rgb(30, 237, 224);
+    border: 1px dotted black;
+    
+}
+
+
+.mainTop button:active{
+    background-color: black;
+    color: white;
+}
+
+
+.mainTop{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: red; */
+    margin-top: 1rem;
+    text-align: center;
+    /* padding: 10rem 0rem ; */
+}
+
+
+#team_A{
+    width: 40%;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-right: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: chartreuse;
+    
+}
+
+
+#team_B{
+    width: 40%;
+    border: 3px solid black;
+    border-radius: 10px;
+
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: coral;
+    
+}
+
+.submit{
+    background-color: rgb(208, 29, 29);
+    background-color: red;
+    color: black;
+}
+
+.submit:active{
+    background-color: rgb(224, 15, 15);
+}
+
+
+/* Bottom Box  */
+.mainBottom{
+    width: 60%;
+    margin: auto;
+    height: 5rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: yellow;
+    padding: 2rem 0rem;
+    
+  
+}
+
+.mainBottom button{
+    width: 20%;
+    height: 10rem;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.8rem;
+}
+
+.mainBottom button:active{
+    background-color: blueviolet;
+}
+
+
+.mainBottom p{
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 1rem;
+    
+    background-color: magenta;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* create the animation  */
+@keyframes bg {
+    0%{
+        background-color: red;
+    }
+    25%{
+        background-color: aqua;
+    } 
+    50%{
+        background-color: magenta;
+
+    }   
+    75%{
+        background-color: yellow;
+    }
+    100%{
+        background-color: rgb(28, 217, 63);
+    }
+}
+
+
+
