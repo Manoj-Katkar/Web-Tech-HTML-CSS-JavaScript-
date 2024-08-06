@@ -1,0 +1,96 @@
+*{
+    font-family: "Grey Qo" , cursive;
+    font-weight: 400;
+}
+
+body{
+    margin: 0px;
+}
+
+
+/* How to center division */
+section
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* animation: bg  3s infinite linear; */
+}
+section>div
+{
+    background-color: hotpink;
+    width: 25%;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+section>div>h2
+{
+    font-size: 2rem;
+}
+
+
+
+section>div>h1
+{
+    font-size: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+section > div > button{
+    width: 30%;
+    height: 3rem;
+    font-size: 1.5rem;
+    color: red;
+    border: none;
+    border-radius: 5px;
+    margin-right: 1rem;
+    background-color: black;
+}
+
+
+section > div > button:active{
+    background-color: white;
+}
+
+
+/* For mobile version  */
+
+@media (max-width : 600px){
+    section > div{
+        width: 60%;
+        /* height: 40vh; */
+    }
+}
+
+/* for tab version  */
+@media (min-width : 601px) and (max-width : 1000px) {
+    section > div{
+        width: 60%;
+        /* height: 45vh; */
+    }
+}
+
+@keyframes bg {
+    0%{
+        background-color: red;
+    }
+    25%{
+        background-color: aqua;
+    } 
+    50%{
+        background-color: magenta;
+
+    }   
+    75%{
+        background-color: yellow;
+    }
+    100%{
+        background-color: rgb(28, 217, 63);
+    }
+}
