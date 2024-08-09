@@ -1,0 +1,25 @@
+img{
+    width: 100%;
+    height: 600px;
+}
+
+div{
+    position: relative;
+}
+
+.fa-forward{
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    color: red;
+}
+
+.fa-backward{
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    color: red;
+
+}
