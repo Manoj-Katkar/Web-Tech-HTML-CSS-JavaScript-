@@ -1,0 +1,84 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    margin-top: 2rem;
+}
+
+#players{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    /* background-color: red  ; */
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.title{
+    text-align: center;
+}
+
+div{
+    margin: 2rem;
+}
+
+#playerDiv{
+    background-color: aqua;
+    width: 45%;
+    text-align: center;
+}
+
+#computerDiv{
+    background-color: aqua;
+    width: 45%;
+    text-align: center;
+}
+
+#ButtonResult{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+
+}
+
+#ButtonResult > div{
+    width: 50%;
+    /* background-color: chartreuse; */
+}
+
+#ButtonResult > div > p{
+    margin: 1.2em;
+    font-size: 2rem;
+    color: red;
+    width: 100%;
+}
+
+#ButtonResult > div > button{
+    width: 30%;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.3rem;
+    background-color: yellow;
+    color: black;
+}
+
+#players  h2{
+    margin: 1.5rem;
+
+}
+
+#players  h1{
+    margin: 1.5rem;
+
+}
+
+#ButtonResult > div > button:active{
+    background-color: red;
+}

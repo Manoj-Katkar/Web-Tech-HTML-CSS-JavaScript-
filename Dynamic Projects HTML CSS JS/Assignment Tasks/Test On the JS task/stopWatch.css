@@ -1,0 +1,35 @@
+
+section{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+section h1{
+font-size: 4rem;
+}
+
+section div{
+    width: 100%;
+}
+
+section button{
+    width: 20%;
+    height: 40px;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    border: none;
+    background-color: yellow;
+    margin: 0.5rem;
+}
+
+
+section button:active{
+    background-color: red;
+    color: white;
+}
+
+#heading{
+    text-align: center;
+    
+}
