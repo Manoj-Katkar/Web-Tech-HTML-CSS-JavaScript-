@@ -138,7 +138,7 @@ async function muthu(){
         let dataFromServer = await fetch("https://www.shoppersstack.com/shopping/products/alpha");
 
 
-        console.log(dataFromServer);   //*this is promise in the pending stage 
+        console.log(dataFromServer);   //*this is data which is in promise form only 
     
     
         // Now I have to convert the data in j son format 
