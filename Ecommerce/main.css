@@ -81,3 +81,62 @@ nav{
 #nav3 > span{
     color: white;
 }
+
+.design{
+    /* !this is the one way I can update the product with accurate design  */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; */
+
+    /* we can also do it using the grid */
+    display: grid;
+    grid-template-columns: repeat(3 , 25%);
+    justify-content: space-evenly;
+    
+}
+
+.design > div{
+    /* width: 25%; */
+    background-color: yellow;
+    border-radius: 5px;
+}
+
+.design > div > img{
+    width: 100%;
+    height: 15rem;
+    border-radius: 5px;
+}
+
+.design > div > h3{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+
+.design > div > h2{
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.design > div > button{
+    width: 100%;
+    height: 2rem;
+    border: none;
+    background-color: rgb(91, 91, 202);
+    border-radius: 5px;
+    color: white;
+    margin-top: 1rem;
+}
+
+
+.design > div > button:active{
+    background-color: red;
+    color: black;
+}
+
+#menDynamic{
+    margin: 1.5rem;
+}

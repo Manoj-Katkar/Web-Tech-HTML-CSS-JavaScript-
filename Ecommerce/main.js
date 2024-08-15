@@ -58,10 +58,168 @@ async function allProductsData(params) {
 
         //* Now I have to convert the data in json format 
     
-        let convertedDataPromise = await dataFromServer.json();  //*json()will also convert the data in json() format but it is asynchronous 
+        let convertedData = await dataFromServer.json();  //*json()will also convert the data in json() format but it is asynchronous 
+
+        console.log(convertedData);
+
+
+        // now to get the all data related to the all products 
+        let allData = convertedData.data;
+
+        console.log("All Data");
+
+        console.log(allData);
+        
+
+        //* now filtering the all the men data 
+        let  menData = allData.filter((currentElement) => {
+            if(currentElement.category === "men"){
+                return currentElement;
+            }
+        })
+
+
+        console.log("Men Data");
+        
+        console.log(menData);
+
+
+
+        //* now filtering the all the women data 
+        let  womenData = allData.filter((currentElement) => {
+            if(currentElement.category === "women"){
+                return currentElement;
+            }
+        })
+        console.log("women Data");
+        console.log(womenData);
+        
+
+        //* now filtering the all the kids data 
+        let  kidsData = allData.filter((currentElement) => {
+            if(currentElement.category === "kids"){
+                return currentElement;
+            }
+        })
+
+        console.log("kids Data");
+        console.log(kidsData);
+
+
+
+         //* now filtering the all the electronics data 
+
+        let  electronicsData = allData.filter((currentElement) => {
+            if(currentElement.category === "electronics"){
+                return currentElement;
+            }
+        })
+
+        console.log("electronics Data");
+
+        console.log(electronicsData);
+
+
+
+
+        // !Now I have to update the UI with the products via their differant category 
+
+        let maleOutput = document.querySelector("#maleCont");
+
+        // now iterating on the male data array 
+        menData.map((currentElement) => {
+            // console.log(currentElement);
+
+            // I have to get the previous products plus new current product 
+
+            maleOutput.innerHTML += `<div id="menDynamic">
+                                        <img src="${currentElement.productImageURLs[0]}" alt="please wait it is loading">
+                                        <h3>Name ${currentElement.name}</h3>
+                                        <h2>Price ${currentElement.price}</h2>
+                                        <h2>Rating ${currentElement.rating}</h2>
+                                        <button>Add to Cart</button>
+                                    </div>`;
+
+                                    // ${currentElement.productImageURLs[0]} price
+            
+        })
+
+
+
+        //* now for updating the products related to the female 
+
+        let femaleOutput = document.querySelector("#femaleCont");
+
+        // now iterating on the male data array 
+        womenData.map((currentElement) => {
+            // console.log(currentElement);
+
+            // I have to get the previous products plus new current product 
+
+            femaleOutput.innerHTML += `<div id="menDynamic">
+                                        <img src="${currentElement.productImageURLs[0]}" alt="please wait it is loading">
+                                        <h3>Name ${currentElement.name}</h3>
+                                        <h2>Price ${currentElement.price}</h2>
+                                        <h2>Rating ${currentElement.rating}</h2>
+                                        <button>Add to Cart</button>
+                                    </div>`;
+
+                                   
+            
+        })
+
+
+
+
+        //* now for updating the products related to the kids 
+
+        let kidsOutput = document.querySelector("#kidsCont");
+
+        // now iterating on the male data array 
+        kidsData.map((currentElement) => {
+            // console.log(currentElement);
+
+            // I have to get the previous products plus new current product 
+
+            kidsOutput.innerHTML += `<div id="menDynamic">
+                                        <img src="${currentElement.productImageURLs[0]}" alt="please wait it is loading">
+                                        <h3>Name ${currentElement.name}</h3>
+                                        <h2>Price ${currentElement.price}</h2>
+                                        <h2>Rating ${currentElement.rating}</h2>
+                                        <button>Add to Cart</button>
+                                    </div>`;
+
+                                   
+            
+        })
+
+
+        //* now for updating the products related to the electronics
+
+        let electronicsOutput = document.querySelector("#electronicsCont");
+
+        // now iterating on the male data array 
+        electronicsData.map((currentElement) => {
+            // console.log(currentElement);
+
+            // I have to get the previous products plus new current product 
+
+            electronicsOutput.innerHTML += `<div id="menDynamic">
+                                        <img src="${currentElement.productImageURLs[0]}" alt="please wait it is loading">
+                                        <h3>Name ${currentElement.name}</h3>
+                                        <h2>Price ${currentElement.price}</h2>
+                                        <h2>Rating ${currentElement.rating}</h2>
+                                        <button>Add to Cart</button>
+                                    </div>`;
+
+                                   
+            
+        })
     
-        console.log(convertedDataPromise);
-    
+
+
+
+
 }
 
 
