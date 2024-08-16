@@ -11,6 +11,8 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 0rem 1rem;
+    position: sticky;
+    top: 0%;
 }
 
 #nav1{
@@ -137,6 +139,50 @@ nav{
     color: black;
 }
 
-#menDynamic{
+.menDynamic{
     margin: 1.5rem;
+}
+
+
+#searchSection{
+    /* background-color: red; */
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#searchSection > input{
+    padding: 0.5rem;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+#searchSection > button{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: none;
+    background-color: rgb(91, 91, 202);
+    border-radius: 5px;
+    color: white;
+    margin-left: 1rem;
+}
+
+
+#searchSection > button:active{
+    background-color: sandybrown;
+    color: black;
+}
+
+#cart-cont{
+    color: white;
+    font-size: 1rem;
+    position: relative;
+}
+
+#count{
+    color: rgb(21, 212, 155);
+    position: absolute;
+    top: -60%;
+    right: 10%;
+    font-size: 0.8rem;
 }

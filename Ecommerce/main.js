@@ -1,4 +1,5 @@
 
+let cartItems = [];
 
 
 
@@ -132,7 +133,7 @@ async function allProductsData(params) {
 
             // I have to get the previous products plus new current product 
 
-            maleOutput.innerHTML += `<div id="menDynamic">
+            maleOutput.innerHTML += `<div id="${currentElement.productId} class="menDynamic" >
                                         <img src="${currentElement.productImageURLs[0]}" alt="please wait it is loading">
                                         <h3>Name ${currentElement.name}</h3>
                                         <h2>Price ${currentElement.price}</h2>
@@ -156,7 +157,7 @@ async function allProductsData(params) {
 
             // I have to get the previous products plus new current product 
 
-            femaleOutput.innerHTML += `<div id="menDynamic">
+            femaleOutput.innerHTML += `<div id="${currentElement.productId} class="menDynamic"">
                                         <img src="${currentElement.productImageURLs[0]}" alt="please wait it is loading">
                                         <h3>Name ${currentElement.name}</h3>
                                         <h2>Price ${currentElement.price}</h2>
@@ -181,7 +182,7 @@ async function allProductsData(params) {
 
             // I have to get the previous products plus new current product 
 
-            kidsOutput.innerHTML += `<div id="menDynamic">
+            kidsOutput.innerHTML += `<div id="${currentElement.productId} class="menDynamic"">
                                         <img src="${currentElement.productImageURLs[0]}" alt="please wait it is loading">
                                         <h3>Name ${currentElement.name}</h3>
                                         <h2>Price ${currentElement.price}</h2>
@@ -204,7 +205,7 @@ async function allProductsData(params) {
 
             // I have to get the previous products plus new current product 
 
-            electronicsOutput.innerHTML += `<div id="menDynamic">
+            electronicsOutput.innerHTML += `<div id="${currentElement.productId} class="menDynamic"">
                                         <img src="${currentElement.productImageURLs[0]}" alt="please wait it is loading">
                                         <h3>Name ${currentElement.name}</h3>
                                         <h2>Price ${currentElement.price}</h2>
@@ -215,6 +216,72 @@ async function allProductsData(params) {
                                    
             
         })
+
+
+
+        // !Search Results 
+        let serachInput = document.querySelector("#serachInput");
+        let serachBtn = document.querySelector("#searchBtn");
+        let serachDisplayDiv = document.querySelector("#searchResult");
+
+        
+
+
+        console.log(serachInput);
+        console.log(serachBtn);
+        console.log(serachDisplayDiv);
+
+        // adding the event of the search button 
+        serachBtn.addEventListener("click" , (event) => {
+            
+            // now serach then text of the input tag in the all the products 
+            serachDisplayDiv.innerHTML = "";
+
+            allData.map((currentElement) => {
+
+                // *use includes method to search 
+                // HERE i AM CONVERTING THE PRODUCT NAME AND THE INPUT VALUE INTO THE LOWERCASE 
+
+                if(currentElement.name.toLowerCase().includes(serachInput.value.trim().toLowerCase())){
+                    // then I have to print the value 
+                    serachDisplayDiv.innerHTML += `<div id="${currentElement.productId} class="menDynamic"">
+                                                    <img src="${currentElement.productImageURLs[0]}" alt="please wait it is loading">
+                                                    <h3>Name ${currentElement.name}</h3>
+                                                    <h2>Price ${currentElement.price}</h2>
+                                                    <h2>Rating ${currentElement.rating}</h2>
+                                                    <button>Add to Cart</button>
+                                                </div>`
+                }
+
+        
+            })
+        })
+
+
+
+
+        // acessing the all the buttons 
+        // then all buttons from the main section I want to access 
+        let mainSection = document.querySelector("main");
+
+        // from the above main I will access the all the buttons 
+        let allBtnFromMain = mainSection.querySelectorAll("button");
+
+        console.log(allBtnFromMain);
+
+        // I have to convert the allBtnFromMain NodeList to array using the from method or using the forEach I can able to iterate on the NodeList 
+
+        allBtnFromMain.forEach((currentBtn) => {
+            currentBtn.addEventListener("click" ,  (event) => {
+                        
+                console.log(currentBtn.parentElement);
+                
+            } )
+        })
+        
+
+        
+
     
 
 

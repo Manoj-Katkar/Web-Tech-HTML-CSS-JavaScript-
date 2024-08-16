@@ -7,6 +7,9 @@
 
     <!-- linking the css file  -->
      <link rel="stylesheet" href="./main.css">
+
+     <!-- !Connecting with the fontawsome  -->
+     <script src="https://kit.fontawesome.com/cea9806c3e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- nav>(div>h2)+(div>ul>li>a*4)+(div>button*2); -->
@@ -16,13 +19,18 @@
         </div>
 
 
-        <div id="nav2">
+        <div id="nav2"> 
             <ul>
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Women</a></li>
-                <li><a href="#">Kid</a></li>
-                <li><a href="#">electronics</a></li>
+                <li><a href="#maleCont">Men</a></li>
+                <li><a href="#femaleCont">Women</a></li>
+                <li><a href="#kidsCont">Kid</a></li>
+                <li><a href="#electronicsCont">electronics</a></li>
             </ul>
+        </div>
+
+        <div id="cart-cont">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="count">0</span>
         </div>
 
 
@@ -33,6 +41,34 @@
 
 
     </nav>
+
+    <!-- *Creating the one more section that is search  -->
+
+    <section id="searchSection">
+        <input type="text" id="serachInput">
+
+        <button id="searchBtn">Search</button>
+
+        <div id="searchResult" class="design">
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- !now creating the section for getting the all the data from the api  according to the category-->
      <main>
