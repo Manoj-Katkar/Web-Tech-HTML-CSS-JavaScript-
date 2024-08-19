@@ -3,9 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quize Application</title>
+    <!--* link the css file  -->
+     <link rel="stylesheet" href="./quize.css">
+
+     <!-- *link the fontawsome  -->
+     <script src="https://kit.fontawesome.com/cea9806c3e.js" crossorigin="anonymous"></script>
+
+     <!-- *connect to the google fonts  -->
+     <link href="https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+     <!-- *connecting to the logo -->
+      <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+
 </head>
 <body>
-    <h1>Hi Welcome Brother</h1>
+
+    <!--!for each question object I should collect the below details   -->
+
+        <!-- question id 
+            actual question 
+            options = [] array format 
+            correct answer 
+            user answer 
+            visited : false  -->
+    
+     <!-- *Creating the quize based application like  -->
+     <header>
+        <div>
+            <h3>logo</h3>
+        </div>
+        <div>
+            <h3>Quize Name</h3>
+        </div>
+        <div>
+            <h3>
+                <span>00</span> : <span>00</span> : <span>00</span>
+            </h3>
+        </div>
+     </header>
+
+
+     <main>
+        <section id="questions-container">
+
+            <h3>Problem Statement</h3>
+            <h2>Questions</h2>
+            <div id="actual-question">
+               
+            </div>
+
+        </section >
+
+
+
+
+
+        <section id="options-container">
+            <h3>Options</h3>
+
+            <div id="actual-options">
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <section id="btn-container">
+            <div id="actual-btn">
+
+            </div>
+            
+            <div id="legends">
+                <!-- *here the span tag is the dynamic  -->
+                 
+                <h3><span>00</span>Answered</h3>
+                <h3><span>00</span>Not Answered</h3>
+                <h3><span>00</span>Marked</h3>
+                <h3><span>00</span>Not Visited</h3>
+            </div>
+
+        </section>
+
+     </main>
+
+     <!--* footer section  -->
+     <footer>
+        <div>
+            <button class="click-color">Previous</button>
+            <button class="click-color">Revisit & Next</button>
+            <button class="save-submit">Save & Next</button>
+        </div>
+
+
+        <div>
+            <button class="save-submit">Submit Quize</button>
+        </div>
+     </footer>
+
+
+
+    <script src="./quize.js"></script>
 </body>
 </html>

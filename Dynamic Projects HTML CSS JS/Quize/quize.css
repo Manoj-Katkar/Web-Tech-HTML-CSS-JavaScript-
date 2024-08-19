@@ -1,0 +1,146 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* *handling the body using the grid properties  */
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    border-bottom: 4px solid rgb(181, 173, 173);
+}
+
+main{
+    /* display: flex;
+    justify-content: space-between; */
+
+    /* *lets do it using the grid  */
+    display: grid;
+    grid-template-columns: 35% 35% 30%;
+}
+
+#questions-container{
+    padding-left: 1rem;
+    border-right: 3px solid rgb(181, 173, 173);
+    padding-top: 0.5rem;
+}
+
+#questions-container > h2{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+#actual-question{
+    padding-left: 2rem;
+    /* background-color: red; */
+}
+
+#options-container{
+    padding: 0.2rem 1rem;
+}
+
+#btn-container{
+    display: flex;
+    flex-direction: column;
+    
+    padding: 0.2rem 1rem;
+    background-color: #efefef;
+}
+
+#actual-options{
+    display: grid;
+    /* *repeat(no of columns in one row) */
+    grid-template-columns: repeat(2 , 20%);
+    gap: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+
+}
+
+
+
+
+#actual-btn{
+    display: grid;
+    grid-template-columns: repeat(5 , 15%);
+
+    gap: 1rem;
+}
+
+#actual-btn > button{
+    padding: 0.5rem;
+    border: none;
+    background-color: white;
+    border-radius: 12px;
+}
+
+#actual-btn > button:active{
+    background-color: #f86a00;
+    color: white;
+}
+
+#legends{
+    display: grid;
+    /* In one row I want the 2 columns which should access the 45% width  */
+    grid-template-columns: repeat(2 , 45%);
+
+}
+
+#legends > h3 > span{
+    margin-right: 0.5rem;
+}
+
+
+footer{
+
+    display: grid;
+    grid-template-columns: 80% 20%;
+    border-top: 3px solid rgb(181, 173, 173);
+    padding: 0.5rem 1rem;
+}
+
+footer button{
+    padding: 0.8rem;
+    border: none;
+    background-color: white;
+    color: #f86a00;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+    border: 1px solid #f86a00;
+    font-size: 0.7rem;
+    font-weight: 700;
+
+}
+
+.click-color:active{
+    background-color: blue;
+    color: black;
+}
+
+.save-submit{
+    background-color: #f86a00;
+    color: white;
+}
+
+.save-submit:active{
+    background-color: red;
+    color: black;
+}
+
+h3{
+    font-size: 0.8rem;
+}
+
+h2{
+    font-size: 1rem;
+}
