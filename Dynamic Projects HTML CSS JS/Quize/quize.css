@@ -52,6 +52,7 @@ main{
 #btn-container{
     display: flex;
     flex-direction: column;
+
     
     padding: 0.2rem 1rem;
     background-color: #efefef;
@@ -93,6 +94,7 @@ main{
     display: grid;
     /* In one row I want the 2 columns which should access the 45% width  */
     grid-template-columns: repeat(2 , 45%);
+    padding-top: 18rem;
 
 }
 
