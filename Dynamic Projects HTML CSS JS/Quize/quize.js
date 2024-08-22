@@ -1,3 +1,50 @@
+// *Access the signUp details data and also quize user data who is logedIn 
+
+let detailsData = JSON.parse(localStorage.getItem("details"));
+
+let quizeUserData  = JSON.parse(localStorage.getItem("quizeUser"));
+
+let body = document.querySelector("body");
+
+
+console.log("details");
+
+console.log(detailsData);
+console.log("quizeUserData");
+
+console.log(quizeUserData);
+
+
+if(quizeUserData){
+    //*means that user data is there he successfully logedIn 
+
+    //* means the user I have already taken the test 
+    if(quizeUserData.quizeTaken){
+        //*means the current user who logedIn have already attempted for this test 
+        body.innerHTML = `Test Is Already Completed to See result 
+         <a href="./result.html">Click Here</a> `;
+    }
+    else{
+        //* means user is logedIn but the test is not taken 
+        // *then I have to call the main function 
+        mainFunction();
+
+    }
+
+}
+else{
+    alert("LogIn First");
+    window.location.href = "./login.html";
+}
+
+
+// !All Entire code is under the mainFunction 
+
+function mainFunction(){
+
+
+
+
 let storage = [
     {
         questionId : 1,
@@ -95,6 +142,9 @@ let index = 0 ;
 // console.log(Submit_Quize);
 
 
+
+
+
 //* creating buttons based on the total number of the questions 
 function createBtn(){
     storage.forEach((currentElement) => {
@@ -174,6 +224,9 @@ Revisit_Next.addEventListener("click" , (event) => {
     index = (index + 1) % storage.length;
     
     display();
+
+    legends(); //*updating the legends count under which selected means marked as the answer 
+
 });
 
 // 
@@ -188,6 +241,8 @@ previous.addEventListener("click" , (event) => {
     index = (index - 1 + storage.length) % storage.length;
     
     display();
+
+    legends();    //*updating the legends count under which selected means marked as the answer 
 });
 
 // logic for Save_Next button 
@@ -203,6 +258,8 @@ Save_Next.addEventListener("click" , (event) => {
     index = (index + 1) % storage.length;
     
     display();
+
+    legends();  //*updating the legends count under which selected means marked as the answer 
 })
 
 // !Now I am linking the each actual button to its actual question 
@@ -227,6 +284,8 @@ function individualBtn(){
             // we have to update the index also 
             index = currentBtn.id - 1;
             display();
+
+            legends(); //*updating the legends count under which selected means marked as the answer 
     
         })
         
@@ -297,4 +356,141 @@ function notSave(){
     }
 }
 
+//! 21/08/2024 (I was absent yesterday)
+function legends()
+{
+    let legendCont = document.querySelector("#legends");
+    let answer = legendCont.querySelectorAll("span")[0]; 
+    let notAnswer = legendCont.querySelectorAll("span")[1]; //mark and Not visited both will be counted in "notAnswer"
+    let mark = legendCont.querySelectorAll("span")[2]; //you visited but not checked/selected an option
+    let notVisited = legendCont.querySelectorAll("span")[3]; 
+    // to increase or decrease count|| depends on "userAnswer"
+    let answerCount = 0;
+    let notAnswerCount = storage.length;
+    let markCount = 0;
+    let notVisitedCount = storage.length; //initial value is number of questions
 
+    //Iterating over our objects i.e. questions
+    storage.map((e) => 
+    {
+        //logic for count
+        if(e.userAnswer) //answer count should increase if userAnswer is true i.e. if user has answered a question
+        {
+            answerCount++;
+            notAnswerCount--; //And notAnswerCount should decrease
+        }
+
+        if(e.visited) //notVisited Count should decrease if user has visited a question
+        {
+            notVisited--;
+        }
+
+        //Condition for count of mark
+        if(e.visited && !e.userAnswer) //visited but not answered
+        {
+            markCount++;
+        }
+    });
+
+    answer.innerHTML = answerCount;
+    notAnswer.innerHTML = notAnswerCount;
+    mark.innerHTML = markCount;
+    notVisited.innerHTML = notAnswerCount;
+}
+legends(); //Function call
+
+
+
+//!TIMER Part
+function timer()
+{
+    let header = document.querySelector("header");
+    let hr = header.querySelectorAll("span")[0];
+    let min = header.querySelectorAll("span")[1];
+    let sec = header.querySelectorAll("span")[2];
+
+    //Giving time in seconds
+    let duration = 10;   //setting the timer to 2 hours 
+
+    let intervalId = setInterval(() => 
+    {
+        duration--;
+        hr.innerHTML = `${Math.floor(duration / 3600)}`; //For Hours: ${Math.floor(duration%3600)} = 
+        min.innerHTML = `${Math.floor((duration % 3600) / 60)}`;     
+        sec.innerHTML = `${(duration % 3600) % 60}`;  //Here remainder will not be in decimal so not Math.floor needed || ${duration % 60} will only work for smaller numbers
+
+
+        //*now when the timer will become == 0 then interval should get cleared 
+        if(duration == 0){
+            clearInterval(intervalId);
+            //!then for auto submit should also work
+
+        // then I have to store the data of the current user of all quize attempted under the quizeTaken 
+        // so updating all the user ans for that user under the quizeTaken in the local storage 
+            quizeUserData.quizeTaken = storage;  //this got updated in the javascript quize user data 
+
+            localStorage.setItem("quizeUser" , JSON.stringify(quizeUserData));  //*updating the local storage also 
+
+        
+
+            // !Now I have to update the details also
+            detailsData = detailsData.filter((currentUserData) => {    //*here reassigning is done 
+                if(!currentUserData.phoneNum === quizeUserData.phoneNum){   //here my current user data will not be returned 
+                    return currentUserData;
+                }
+            })
+
+            //* Now I will add my current user updated data 
+            detailsData.push(quizeUserData);
+
+            //* also update in the local storage 
+            localStorage.setItem("details" , JSON.stringify(detailsData));
+
+            window.location.href = "./result.html";
+
+        }
+    },1000)
+}
+
+timer(); //function call
+
+
+
+
+// Date 22/08/24
+
+// !adding the event on the submit button 
+Submit_Quize.addEventListener("click" , (event) => {
+    // so to redirect once the quize is submitted then store the result of the confirm under one variable 
+
+   let confirmMessage =  confirm("are you sure you want to submit ");
+
+
+   if(confirmMessage){
+    //*means user clicked on the ok 
+    // then I have to store the data of the current user of all quize attempted under the quizeTaken 
+    // so updating all the user ans for that user under the quizeTaken in the local storage 
+        quizeUserData.quizeTaken = storage;  //this got updated in the javascript quize user data 
+
+        localStorage.setItem("quizeUser" , JSON.stringify(quizeUserData));  //*updating the local storage also 
+
+       
+
+        // !Now I have to update the details also
+        detailsData = detailsData.filter((currentUserData) => {    //*here reassigning is done 
+            if(!currentUserData.phoneNum != quizeUserData.phoneNum){   //here my current user data will not be returned 
+                return currentUserData;
+            }
+        })
+
+        //* Now I will add my current user updated data 
+        detailsData.push(quizeUserData);
+
+        //* also update in the local storage 
+        localStorage.setItem("details" , JSON.stringify(detailsData));
+
+        window.location.href = "./result.html";
+   }
+})
+
+}

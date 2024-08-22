@@ -62,7 +62,8 @@ form.addEventListener("submit" , (event) => {
         alert("Welcome to the page");
 
         // here the user match data object then only that one data should store inside the localStorage 
-        localStorage.setItem("oneUser" , JSON.stringify(matchedData));
+        // !for quize we are making quize user 
+        localStorage.setItem("quizeUser" , JSON.stringify(matchedData));
     }
     else{
         eForm.innerHTML = "Match Not Found";

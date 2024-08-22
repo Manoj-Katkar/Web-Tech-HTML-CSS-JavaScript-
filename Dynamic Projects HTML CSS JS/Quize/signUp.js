@@ -281,7 +281,9 @@ if(flag){
         lastN :lastName.value,
         email :email.value,
         phoneNum : phoneNumber.value,
-        pass : confirmPassword.value
+        pass : confirmPassword.value,
+        quizeTaken : null   //it will be used to track where the user taken the quize or not 
+
     }
 
 
