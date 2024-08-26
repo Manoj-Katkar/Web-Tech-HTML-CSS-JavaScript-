@@ -1,0 +1,35 @@
+#root{
+    width: 20%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4 , 110%);
+    /* margin: auto; */
+
+
+}
+
+img{
+    width: 100%;
+    height: 9rem;
+}
+
+.rest{
+    margin: 1rem;
+    background-color: yellow;
+    flex-wrap: wrap;
+    /* margin-left: 10rem; */
+    text-align: center;
+
+
+
+}
+
+button{
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #da791a;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    border-radius: 7px;
+}
