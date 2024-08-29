@@ -1,19 +1,28 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-nav{
-    /* background-color: red; */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation bar */
+nav {
     background-color: #121921;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0rem 1rem;
+    padding: 0.5rem 1.5rem;
     position: sticky;
-    top: 0%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 #nav1{
     width: 25%;
@@ -30,159 +39,266 @@ nav{
 
 #nav3{
     width: 25%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    /* background-color: yellow; */
 }
 
-#nav1 > h2{
-    color: white;
-    font-size: 1.5rem;
+
+
+#nav1 h2 {
+    color: #fff;
+    font-size: 1.75rem;
 }
 
-#nav2 > ul{
-    
-    /* background-color: aqua; */
+#nav2 ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     list-style-type: none;
 }
 
-#nav2 > ul > li > a{
+#nav2 ul li a {
     text-decoration: none;
-    color: white;
-    padding: 1rem;
+    color: #fff;
+    padding: 0.75rem 1rem;
     display: block;
     font-size: 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-
-#nav2 > ul > li > a:hover{
-    color: black;
-    background-color: magenta;
+#nav2 ul li a:hover {
+    color: #121921;
+    background-color: #f64f59;
+    border-radius: 5px;
 }
 
+#nav3 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
-#nav3   button{
-
-    background-color: red;
+#nav3 button {
+    background-color: #f64f59;
     border: none;
-    font-size: 0.8rem;
-    padding: 0.8rem;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
     color: white;
     border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0.5rem;
+
 }
 
-#nav3  button:active{
-    background-color: blue;
+#nav3 button:hover {
+    background-color: #c43842;
+}
+
+#nav3 button:active {
+    background-color: #5A67D8;
     color: white;
 }
 
 #nav3 > span{
     color: white;
+    padding-right: 1rem;
 }
 
-.design{
-    /* !this is the one way I can update the product with accurate design  */
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; */
+#cart-cont {
+    color: #fff;
+    font-size: 1.5rem;
+    position: relative;
+    cursor: pointer;
+    margin-right: 1rem;
+}
 
-    /* we can also do it using the grid */
+#count {
+    background-color: #15d49b;
+    color: #fff;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Search Section */
+#searchSection {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#searchSection input {
+    padding: 0.75rem;
+    border: 2px solid #121921;
+    border-radius: 7px;
+    width: 50%;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#searchSection input:focus {
+    outline: none;
+    border-color: #f64f59;
+}
+
+#searchSection button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: #f64f59;
+    border-radius: 7px;
+    color: white;
+    margin-left: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#searchSection button:hover {
+    background-color: #c43842;
+}
+
+#searchSection button:active {
+    background-color: #f4a261;
+    color: black;
+}
+
+/* Product Grid */
+.design {
     display: grid;
-    grid-template-columns: repeat(3 , 25%);
-    justify-content: space-evenly;
-    
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
 }
 
-.design > div{
-    /* width: 25%; */
-    background-color: yellow;
-    border-radius: 5px;
+.design > div {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.design > div > img{
+.design > div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.design > div > img {
     width: 100%;
     height: 15rem;
-    border-radius: 5px;
+    object-fit: cover;
 }
 
-.design > div > h3{
+.design > div > h3, .design > div > h2 {
     text-align: center;
     margin-top: 1rem;
     font-size: 1rem;
 }
 
-
-.design > div > h2{
-    text-align: center;
-    margin-top: 0.5rem;
-    font-size: 1rem;
-}
-
-.design > div > button{
+.design > div > button {
     width: 100%;
-    height: 2rem;
+    padding: 1rem;
     border: none;
-    background-color: rgb(91, 91, 202);
-    border-radius: 5px;
+    background-color: #5A67D8;
     color: white;
-    margin-top: 1rem;
+    border-radius: 0 0 10px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+.design > div > button:hover {
+    background-color: #434AA0;
+}
 
-.design > div > button:active{
+.design > div > button:active {
     background-color: red;
     color: black;
 }
 
-.menDynamic{
+
+/* making menDynamic cart more attractive */
+
+.menDynamic {
     margin: 1.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
+.menDynamic img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
 
-#searchSection{
-    /* background-color: red; */
+.menDynamic h3 {
+    font-size: 1.2rem;
     text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    color: #333;
+    margin: 1rem 0;
 }
 
-#searchSection > input{
-    padding: 0.5rem;
-    border: 2px solid black;
-    border-radius: 7px;
+.menDynamic h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #f64f59;
+    margin-bottom: 1rem;
 }
 
-#searchSection > button{
-    margin-top: 1rem;
-    padding: 0.5rem;
+.menDynamic button {
+    width: 100%;
+    padding: 1rem;
     border: none;
-    background-color: rgb(91, 91, 202);
-    border-radius: 5px;
+    background-color: #5A67D8;
     color: white;
-    margin-left: 1rem;
+    border-radius: 0 0 10px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+.menDynamic button:hover {
+    background-color: #434AA0;
+}
 
-#searchSection > button:active{
-    background-color: sandybrown;
+.menDynamic button:active {
+    background-color: red;
     color: black;
 }
 
-#cart-cont{
-    color: white;
-    font-size: 1rem;
-    position: relative;
+.menDynamic:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-#count{
-    color: rgb(21, 212, 155);
-    position: absolute;
-    top: -60%;
-    right: 10%;
-    font-size: 0.8rem;
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    #nav1, #nav2, #nav3 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    #nav2 ul {
+        flex-direction: column;
+    }
+
+    #nav2 ul li a {
+        padding: 0.5rem;
+    }
+
+    #searchSection input {
+        width: 90%;
+    }
 }
