@@ -307,3 +307,83 @@ nav{
 #zomato-app-2 > div{
     margin-top: 2rem;
 }
+
+
+
+
+/** css  for mobile  Tablet for zomato mobile section (landscape and portrait) */
+@media (max-width: 1024px) {
+    #zomato-app {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #zomato-app-1 {
+        width: 100%;
+        height: auto;
+    }
+
+    #zomato-app-2 {
+        width: 90%;
+        text-align: center;
+    }
+
+    #zomato-app-2 > h2 {
+        font-size: 2.5rem;
+    }
+
+    #zomato-app-2 > p {
+        font-size: 1.1rem;
+    }
+
+    #zomato-app-2 > .email {
+        width: 70%;
+    }
+
+    #zomato-app-2 img {
+        width: 25%;
+        height: auto;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    #zomato-app {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    #zomato-app-1 {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    #zomato-app-2 {
+        width: 100%;
+    }
+
+    #zomato-app-2 > h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    #zomato-app-2 > p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #zomato-app-2 > .email {
+        width: 80%;
+        margin: 1rem 0;
+    }
+
+    #zomato-app-2 img {
+        width: 50%;
+        height: auto;
+    }
+
+    #zomato-app-2 > button {
+        width: 80%;
+        margin: 1rem 0;
+    }
+}
