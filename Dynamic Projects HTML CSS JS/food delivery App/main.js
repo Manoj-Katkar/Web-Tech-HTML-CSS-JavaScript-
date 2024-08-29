@@ -1005,11 +1005,24 @@ let divRoot = document.querySelector("#root");
 // Approach I have to iterate over the restaurantData Array
 
 restaurantData.map((currentRestaurant , currentIndex) => {
-    divRoot.innerHTML += `<div class="rest">
-                            <img src="${currentRestaurant.restaurantImg}" >
-                            <h3>${currentRestaurant.name}</h3>
-                            <h4>${currentRestaurant.restaurantLocation}</h4>
-                            <h3>${currentRestaurant.offerGoingOn}</h3>
-                            <button>View Restaurant</button>
+    divRoot.innerHTML += `<div class="all-restaurants">
+                            <div class="all-restaurants-1">
+                                <img src="${currentRestaurant.restaurantImg}" alt="">
+                                <h2>${currentRestaurant.name}</h2>
+                                <h3>${currentRestaurant.restaurantLocation}</h3>
+                                <span>Vesu</span>
+                            </div>
+
+                            <div class="all-restaurants-2">
+                                <h4 class="rating"><i class="fa-solid fa-star"></i> 
+                                ${currentRestaurant.rating}</h4>
+                                <span>.</span>
+                                <h4>${currentRestaurant.distance}</h4>
+                                <span>.</span>
+                                <h4>${currentRestaurant.offerGoingOn}</h4>
+                            </div>
                         </div>`
 })
+
+
+

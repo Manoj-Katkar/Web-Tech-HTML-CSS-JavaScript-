@@ -1,35 +1,85 @@
-#root{
-    width: 20%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(4 , 110%);
-    /* margin: auto; */
-
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-img{
-    width: 100%;
-    height: 9rem;
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
 }
 
-.rest{
-    margin: 1rem;
-    background-color: yellow;
+#root {
+    display: flex;
     flex-wrap: wrap;
-    /* margin-left: 10rem; */
-    text-align: center;
-
-
-
+    justify-content: center;
+    padding: 2rem;
 }
 
-button{
+img {
     width: 100%;
-    padding: 0.8rem;
-    background-color: #da791a;
-    color: black;
-    font-size: 1rem;
-    border: none;
+    height: 12rem;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.all-restaurants {
+    width: 22%;
+    min-width: 250px; /* Ensures a minimum width for better responsiveness */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 1rem;
+    background-color: white;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effect */
+}
+
+.all-restaurants:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.all-restaurants h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.all-restaurants h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    color: #666;
+}
+
+.all-restaurants-1 {
+    padding: 0.5rem;
+}
+
+.all-restaurants-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #f8f8f8;
+}
+
+.all-restaurants-2 > span {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+.all-restaurants-2 > h4 {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.all-restaurants-2 > .rating {
+    background-color: #00b01e;
+    color: white;
+    padding: 0.4rem 0.6rem;
     border-radius: 7px;
+}
+
+.fa-star {
+    font-size: 0.9rem;
 }
