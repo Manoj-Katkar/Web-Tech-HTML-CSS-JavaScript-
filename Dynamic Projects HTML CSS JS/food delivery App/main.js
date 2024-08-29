@@ -1002,27 +1002,34 @@ let divRoot = document.querySelector("#root");
 
 
 
-// Approach I have to iterate over the restaurantData Array
+// Approach I have to iterate over the restaurantData Array and display it into the UI 
 
-restaurantData.map((currentRestaurant , currentIndex) => {
-    divRoot.innerHTML += `<div class="all-restaurants">
-                            <div class="all-restaurants-1">
-                                <img src="${currentRestaurant.restaurantImg}" alt="">
-                                <h2>${currentRestaurant.name}</h2>
-                                <h3>${currentRestaurant.restaurantLocation}</h3>
-                                <span>Vesu</span>
-                            </div>
+let displayRestaurants = () =>{
 
-                            <div class="all-restaurants-2">
-                                <h4 class="rating"><i class="fa-solid fa-star"></i> 
-                                ${currentRestaurant.rating}</h4>
-                                <span>.</span>
-                                <h4>${currentRestaurant.distance}</h4>
-                                <span>.</span>
-                                <h4>${currentRestaurant.offerGoingOn}</h4>
-                            </div>
-                        </div>`
-})
 
+    restaurantData.map((currentRestaurant , currentIndex) => {
+        divRoot.innerHTML += `<div class="all-restaurants">
+                                <div class="all-restaurants-1">
+                                    <img src="${currentRestaurant.restaurantImg}" alt="">
+                                    <h2>${currentRestaurant.name}</h2>
+                                    <h3>${currentRestaurant.restaurantLocation}</h3>
+                                    <span>Vesu</span>
+                                </div>
+    
+                                <div class="all-restaurants-2">
+                                    <h4 class="rating"><i class="fa-solid fa-star"></i> 
+                                    ${currentRestaurant.rating}</h4>
+                                    <span>.</span>
+                                    <h4>${currentRestaurant.distance}</h4>
+                                    <span>.</span>
+                                    <h4>${currentRestaurant.offerGoingOn}</h4>
+                                </div>
+                            </div>`
+    })
+
+}
+
+
+displayRestaurants();
 
 

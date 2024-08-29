@@ -9,11 +9,14 @@ body {
     background-color: #f4f4f4;
 }
 
+
+/* *---------------------------------Css for all the displayRestaurants carts ----------------------------------- */
 #root {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 2rem;
+    margin: 3rem 0rem;
 }
 
 img {
@@ -82,4 +85,225 @@ img {
 
 .fa-star {
     font-size: 0.9rem;
+}
+
+
+
+/* *------------------------------------------Css for Nav bar ---------------------------------------- */
+
+nav{
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+#nav-1{
+    width: 25%;
+    color: white;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+#nav-2{
+    width: 60%;
+    color: white;
+}
+
+#nav-2 > ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+#nav-2 > ul a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* *------------------------------ heading zomato css ---------------------------------- */
+
+#heading-zomato{
+    width: 60%;
+    margin: auto;
+    /* background-color: #00b01e; */
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+
+#heading-zomato > h2{
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+#heading-zomato > p{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    color: white;
+
+}
+
+#heading-zomato > div >  input{
+    width: 60%;
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.2rem;
+}
+
+#heading-zomato > div >  button{
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    background-color: #f04f5e;
+    color: white;
+
+}
+
+#heading-zomato > div >  button:active{
+    background-color: red;
+    color: white;
+}
+
+#heading-zomato div{
+    position: relative;
+}
+
+.fa-magnifying-glass{
+    position: absolute;
+    top: 32%; /* Center vertically */
+    left: 14%; /* Adjust as necessary */
+    color: black;
+    
+}
+
+#for-background-change{
+    background-image: url('./images/zomato-background\ image.avif');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image in the container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100%; /* Ensures the container takes up 100% of the width */
+}
+
+
+
+
+
+
+/* * writing the css for the zomato app section mobile  */
+#zomato-app{
+    width: 80%;
+    /* margin: 5rem 0rem; */
+    /* margin-top: 2rem;
+    margin-bottom: 2rem; */
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: red; */
+    margin-bottom: 3rem;
+}
+
+
+#zomato-app-1 img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Maintains aspect ratio and covers the container */
+    object-position: center; /* Centers the image in the container */
+}
+
+
+#zomato-app-1{
+    width: 40%;
+    /* background-color: magenta; */
+}
+
+#zomato-app-2{
+    width: 50%;
+    /* background-color: #00b01e; */
+
+}
+
+#zomato-app-2 div{
+    width: 100%;
+}
+
+#zomato-app-2 img{
+    width: 30%;
+    height: 3rem;
+
+}
+
+
+#zomato-app-2 > h2{
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+    color: #292929;
+}
+
+
+#zomato-app-2 > p{
+    font-size: 1.rem; 
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 25px;
+    color: rgba(0, 0, 0, 0.715);
+}
+
+
+#zomato-app-2 > .radio-input{
+    /* font-size: 10rem; */
+    transform: scale(1.5); 
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+#zomato-app-2 > .phone{
+    margin-right: 1rem;
+}
+
+#zomato-app-2 > .email{
+    width: 55%;
+    padding: 0.7rem 0.5rem;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    margin: 1.5rem 0rem;
+    border: 1px solid gray;
+}
+
+#zomato-app-2 > button{
+    padding: 0.7rem 0.5rem;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    margin: 1.5rem 0rem;
+    color: white;
+    background-color: #f04f5e;
+}
+
+#zomato-app-2 > button:active{
+    background-color: black;
+    color: white;
+}
+
+#zomato-app-2 > span{
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.632);
+    padding-bottom: 2rem;
+}
+
+#zomato-app-2 > div{
+    margin-top: 2rem;
 }
