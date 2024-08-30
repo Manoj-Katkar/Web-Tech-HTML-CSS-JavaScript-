@@ -130,7 +130,41 @@ function logInLogOut(){
     // updating the user information
     
     if(currentUserData){
-        login.innerHTML = `<span>Welcome ${currentUserData.firstN}</span> <a href = "./main.html"><button id = "logout">Logout</button></a>  `;
+
+
+        // !then I have to also reassign the cartIteams from the local storage from All users data to the current user data if he already in the past signedIn 
+
+            // !I have to also update in the AllUsersData
+            // ^here it is not getting updated because I have to go under that user 
+
+            let AllUsersDataArray = JSON.parse(localStorage.getItem("AllUsersData"));
+
+            console.log(AllUsersDataArray);
+
+
+            AllUsersDataArray.map((currentUser , index) => {
+                if(currentUserData.email === currentUser.email || currentUserData.phoneNum === currentUser.phoneNum){
+  
+                  //then means I at the correct currentUser 
+                  currentUserData.cartIteams = currentUser.cartIteams;
+  
+                  console.log("currentUserData");
+  
+                  console.log(currentUserData);
+  
+                  
+                  
+                }
+              })
+            
+              //!then also update the in the local stoarege that user ordered which food 
+            localStorage.setItem("currentUserZomato" , JSON.stringify(currentUserData));
+
+
+
+        login.innerHTML = `<span>Welcome ${currentUserData.firstN}</span> 
+            <a href = "./userOrders.html"><button class = "cart"><i class="fa-solid fa-cart-shopping"></i></button></a>
+          <a href = "./main.html"><button id = "logout">Logout</button></a>  `;
     
         // accessing the logout buttton 
         let logout = document.querySelector("#logout");
@@ -159,7 +193,7 @@ logInLogOut();
 
 
 // !Now I have to write the code for the all the restaurants 
-// *Means if user click on any restaurant it should get re-directed to the new website that will be menue.html 
+// *Means if user click on any restaurant it should get re-directed to the new website that will be menu.html 
 
 
 
@@ -172,6 +206,22 @@ function restaurantsClickEvents(){
 
     allRestaurantsDiv.forEach((currentRestaurantDiv , Index) => {
         currentRestaurantDiv.addEventListener("click" , (event) => {
+
+
+            // !First I have to make sure in the local storage under userOpenRestaurantArray there is empty array only 
+
+            let currentUserZomato = JSON.parse(localStorage.getItem("currentUserZomato"));
+
+            console.log(currentUserZomato);
+
+            currentUserZomato.userOpenRestaurantArray = [];  //*making it intensionally empty to track each time only one restaurant data 
+
+            //! now also update that in the local storage for that current zomato user 
+            localStorage.setItem("currentUserZomato" , JSON.stringify(currentUserZomato));
+
+
+
+
             //*then I have to store on which restaurant user clicked on in the local storage 
             console.log("current target restaurant");
             console.log(event.target.parentElement.parentElement);  //to get the parent element 
@@ -199,8 +249,8 @@ function restaurantsClickEvents(){
                     //* then I have to store this data in the local storage userOpenRestaurantArray
 
                     //In local storage we canoot able to undate hence we will overide the data 
-
-                    let currentUserZomato = JSON.parse(localStorage.getItem("currentUserZomato"));
+                    // below is commanded because already it is declared above 
+                    // let currentUserZomato = JSON.parse(localStorage.getItem("currentUserZomato"));
 
                     console.log(currentUserZomato);
 

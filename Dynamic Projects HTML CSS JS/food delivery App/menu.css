@@ -187,7 +187,7 @@ nav{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background-color: rgba(0, 0, 0, 0.742); /* Semi-transparent black overlay */
     z-index: 1; /* Ensures the overlay stays above the background image but below the text */
 }
 
@@ -197,4 +197,512 @@ nav{
     z-index: 2; /* Ensures the content stays above the overlay */
     color: white; /* Ensures text is white */
 }
+
+
+/* !------------------------css for each restaurant food they are offering --------------------- */
+
+
+/* *css for the restaurant details with its image and all other details */
+
+#restaurant-details {
+    width: 100%;
+
+    margin: 0 0 2rem 0;
+}
+
+.dynamic-restaurant {
+    width: 100%;
+    margin: auto;
+    background: linear-gradient(to right, #1e1e1e, #000);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dynamic-restaurant::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/pattern.png'); /* Use a subtle pattern or texture */
+    opacity: 0.05;
+    z-index: 1;
+}
+
+#dynamic-restaurant1 {
+    width: 40%;
+    margin: auto;
+    background-color: #d32f2f;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#dynamic-restaurant2 {
+    width: 50%;
+    padding-left: 1.5rem;
+    z-index: 2;
+}
+
+#dynamic-restaurant1 > img {
+    width: 100%;
+    height: 20rem;
+    padding: 0.5rem;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+#dynamic-restaurant1 > img:hover {
+    transform: scale(1.1);
+}
+
+#dynamic-restaurant2 > h3 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    color: #ffcc00;
+}
+
+#dynamic-restaurant2 > p {
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    color: #d3d3d3;
+}
+
+#dynamic-restaurant2 div {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+#dynamic-restaurant2 .border-togive {
+    border-right: 1px solid #555;
+    padding-right: 1rem;
+    font-weight: 500;
+    color: #f0f0f0;
+}
+
+#dynamic-restaurant2 .left {
+    padding-left: 1rem;
+    font-weight: 400;
+    color: #c0c0c0;
+}
+
+.start {
+    padding: 1rem 0.7rem;
+    background-color: #ff9800;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.start i {
+    margin-right: 0.5rem;
+    color: #fff700;
+}
+
+.start:hover {
+    background-color: #e68900;
+    transform: translateY(-3px);
+}
+
+
+
+
+
+
+/** css for each menu */
+
+
+#menu-details{
+    width: 90%;
+    margin: auto;
+}
+
+.RecommendedProducts{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.272);
+    padding: 1rem;
+    /* background-color: #f04f5e; */
+}
+
+.product-details{
+    width: 60%;
+    margin: auto;
+    /* background-color: red; */
+}
+
+.product-image{
+    width: 40%;
+    margin: auto;
+    /* margin-left: 2rem; */
+    text-align: center;
+    line-height: 30px;
+}
+
+.product-image > img{
+    width: 40%;
+    height: 10rem;
+    margin: 1rem;
+}
+
+.product-image > button{
+    width: 40%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 7px;
+    color: black;
+    background-color: #da791a;
+    margin-bottom: 1rem;
+
+}
+
+.product-image > button:active{
+    background-color: red;
+    color: white;
+}
+
+.Price{
+    margin-top: 1.5rem;
+}
+
+
+.badge {
+    background-color: #ff9800;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+
+}
+
+.product-description {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 1rem;
+}
+
+
+.cart{
+    color: white;
+    width: 20%;
+    height: 1rem;
+    font-size: 10rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* !making the design responsice  */
+
+/* Mobile-first responsive design */
+
+/* For mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+    /* Navbar adjustments */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem;
+    }
+
+    #nav-1, #nav-2, #nav-3 {
+        width: 100%;
+        text-align: left;
+        margin: 0.5rem 0;
+    }
+
+    #nav-2 {
+        margin-left: 0;
+    }
+
+    #nav-2 > ul {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.9rem;
+    }
+
+    #nav-2 > ul a {
+        margin: 0.5rem 0;
+    }
+
+    #nav-3 {
+        justify-content: space-between;
+        padding: 0.5rem;
+    }
+
+    #nav-3 > a > button {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Heading section adjustments */
+    #heading-zomato {
+        width: 90%;
+        padding: 2rem 0.5rem;
+    }
+
+    #heading-zomato > h2 {
+        font-size: 2.5rem;
+    }
+
+    #heading-zomato > p {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    #heading-zomato > div > input,
+    #heading-zomato > div > button {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .fa-magnifying-glass {
+        top: 35%;
+        left: 10%;
+    }
+
+    /* Restaurant details adjustments */
+    #restaurant-details {
+        padding: 1rem;
+    }
+
+    .dynamic-restaurant {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    #dynamic-restaurant1, #dynamic-restaurant2 {
+        width: 100%;
+    }
+
+    #dynamic-restaurant1 > img {
+        height: 15rem;
+    }
+
+    #dynamic-restaurant2 > h3 {
+        font-size: 2.5rem;
+    }
+
+    #dynamic-restaurant2 > p {
+        font-size: 1.5rem;
+    }
+
+    #dynamic-restaurant2 div {
+        width: 100%;
+        flex-direction: column;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .border-togive {
+        border-right: none;
+        border-bottom: 1px solid #555;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Menu details adjustments */
+    #menu-details {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .RecommendedProducts {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .product-details, .product-image {
+        width: 100%;
+        margin: 0;
+    }
+
+    .product-image > img {
+        width: 60%;
+        height: auto;
+    }
+
+    .product-image > button {
+        width: 80%;
+    }
+}
+
+
+
+/* Tablet responsive design */
+
+/* For tablet devices (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Navbar adjustments */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    #nav-1, #nav-2, #nav-3 {
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    #nav-2 {
+        margin-left: 0;
+    }
+
+    #nav-2 > ul {
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 1rem;
+    }
+
+    #nav-2 > ul a {
+        margin: 0;
+    }
+
+    #nav-3 {
+        justify-content: space-between;
+        padding: 0.5rem;
+    }
+
+    #nav-3 > a > button {
+        width: auto;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    /* Heading section adjustments */
+    #heading-zomato {
+        width: 80%;
+        padding: 3rem 1rem;
+    }
+
+    #heading-zomato > h2 {
+        font-size: 3.5rem;
+    }
+
+    #heading-zomato > p {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+
+    #heading-zomato > div > input,
+    #heading-zomato > div > button {
+        width: 70%;
+        padding: 0.7rem 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .fa-magnifying-glass {
+        top: 32%;
+        left: 12%;
+    }
+
+    /* Restaurant details adjustments */
+    #restaurant-details {
+        padding: 1rem;
+    }
+
+    .dynamic-restaurant {
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    #dynamic-restaurant1, #dynamic-restaurant2 {
+        width: 45%;
+    }
+
+    #dynamic-restaurant1 > img {
+        height: 18rem;
+    }
+
+    #dynamic-restaurant2 > h3 {
+        font-size: 3rem;
+    }
+
+    #dynamic-restaurant2 > p {
+        font-size: 1.8rem;
+    }
+
+    #dynamic-restaurant2 div {
+        width: 80%;
+        flex-direction: row;
+        font-size: 1.1rem;
+        text-align: left;
+    }
+
+    .border-togive {
+        border-right: 1px solid #555;
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    /* Menu details adjustments */
+    #menu-details {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .RecommendedProducts {
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    .product-details, .product-image {
+        width: 50%;
+        margin: 0;
+    }
+
+    .product-image > img {
+        width: 70%;
+        height: auto;
+    }
+
+    .product-image > button {
+        width: 60%;
+    }
+}
+
 
