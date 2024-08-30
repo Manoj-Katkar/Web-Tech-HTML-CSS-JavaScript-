@@ -12,7 +12,7 @@ console.log(form, userName, password, eUser,ePass,eForm);
 
 // !getting the data from the local storage 
 
-let dataFromStorage = JSON.parse(localStorage.getItem("data"));
+let dataFromStorage = JSON.parse(localStorage.getItem("AllUsersData"));
 
 console.log(dataFromStorage);
 
@@ -62,7 +62,7 @@ form.addEventListener("submit" , (event) => {
         alert("Welcome to the page");
 
         //* here the user match data object then only that one data should store inside the localStorage 
-        localStorage.setItem("oneUser" , JSON.stringify(matchedData));
+        localStorage.setItem("currentUserZomato" , JSON.stringify(matchedData));
     }
     else{
         eForm.innerHTML = "Match Not Found";
@@ -74,7 +74,7 @@ form.addEventListener("submit" , (event) => {
 
 
 
-// Accessing the password h3
+//* Accessing the password h3
 let h3 = document.querySelector("h3");
 
 h3.addEventListener("click" , (event) => {

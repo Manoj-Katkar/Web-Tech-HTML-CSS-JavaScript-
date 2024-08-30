@@ -42,13 +42,17 @@ console.log(eConfirmPass);
 let storage = [];
 
 
-let dataFromStorage = JSON.parse(localStorage.getItem("data"));
+let dataFromStorage = JSON.parse(localStorage.getItem("AllUsersData"));
+
+console.log(dataFromStorage);
+
 
 
 //*here we are doing like appending in the array
 
 if(dataFromStorage){
     storage = dataFromStorage;
+    
 }
 
 
@@ -282,7 +286,11 @@ if(flag){
         email :email.value,
         phoneNum : phoneNumber.value,
         pass : confirmPassword.value,
-        cartIteams : null
+        // In cartIteam I will store the all dishes that particular user have ordered using add to cart button
+        cartIteams : [],
+
+        // *Now to track that user opened which restaurants I will create the one more Array 
+        userOpenRestaurantArray : []
     }
 
 
@@ -291,7 +299,7 @@ if(flag){
     storage.push(details);
 
     // adding the data in the local storage 
-    localStorage.setItem("data" , JSON.stringify(storage));
+    localStorage.setItem("AllUsersData" , JSON.stringify(storage));
 
     console.log(details);
 }
