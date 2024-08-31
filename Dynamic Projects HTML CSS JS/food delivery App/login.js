@@ -20,6 +20,8 @@ console.log(dataFromStorage);
 
 
 
+
+
 form.addEventListener("submit" , (event) => {
 
     // first make the everything empty 
@@ -29,16 +31,22 @@ form.addEventListener("submit" , (event) => {
 
     // event.preventDefault();
 
+    // here check if the data from the local storage is empty means null then I have to move user to first signUp 
+
+
+
     // matching the data is also the one object 
     let matchedData = dataFromStorage.find((currentElement) => {
         if((currentElement.phoneNum == userName.value) && (currentElement.pass == password.value) || ((currentElement.email == userName.value) && (currentElement.pass == password.value)) 
             ||  ((currentElement.firstN == userName.value) && (currentElement.pass == password.value)) ){
-            // means returning that object of the having all the details 
+            // means returning that object of the having all the details .
+            flag = 1;
             return currentElement;
         }
+
     })
 
-    console.log(matchedData);
+
     
 
 
@@ -67,6 +75,7 @@ form.addEventListener("submit" , (event) => {
     else{
         eForm.innerHTML = "Match Not Found";
         event.preventDefault();
+
     }
 })
 

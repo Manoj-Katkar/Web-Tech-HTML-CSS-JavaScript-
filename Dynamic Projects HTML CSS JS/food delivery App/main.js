@@ -200,6 +200,9 @@ logInLogOut();
 
 function restaurantsClickEvents(){
 
+
+
+
     // for that I have to access the all the div having the class="all-restaurants"
 
     let allRestaurantsDiv = document.querySelectorAll(".all-restaurants");   //this is going to be the nodelist iterate over it and add the event listner to each div
@@ -207,83 +210,98 @@ function restaurantsClickEvents(){
     allRestaurantsDiv.forEach((currentRestaurantDiv , Index) => {
         currentRestaurantDiv.addEventListener("click" , (event) => {
 
+            //here I have to check whether the user is logedIn then only move to the restaurant having menu else move that user to first login 
 
-            // !First I have to make sure in the local storage under userOpenRestaurantArray there is empty array only 
+            if(currentUserData){
+                //^means the user is logedIn allow o=it to move 
 
-            let currentUserZomato = JSON.parse(localStorage.getItem("currentUserZomato"));
+                // !First I have to make sure in the local storage under userOpenRestaurantArray there is empty array only 
 
-            console.log(currentUserZomato);
+                let currentUserZomato = JSON.parse(localStorage.getItem("currentUserZomato"));
 
-            currentUserZomato.userOpenRestaurantArray = [];  //*making it intensionally empty to track each time only one restaurant data 
+                console.log(currentUserZomato);
 
-            //! now also update that in the local storage for that current zomato user 
-            localStorage.setItem("currentUserZomato" , JSON.stringify(currentUserZomato));
+                currentUserZomato.userOpenRestaurantArray = [];  //*making it intensionally empty to track each time only one restaurant data 
+
+                //! now also update that in the local storage for that current zomato user 
+                localStorage.setItem("currentUserZomato" , JSON.stringify(currentUserZomato));
 
 
 
 
-            //*then I have to store on which restaurant user clicked on in the local storage 
-            console.log("current target restaurant");
-            console.log(event.target.parentElement.parentElement);  //to get the parent element 
+                //*then I have to store on which restaurant user clicked on in the local storage 
+                console.log("current target restaurant");
+                console.log(event.target.parentElement.parentElement);  //to get the parent element 
 
-            //Now I will get the name of the restaurant and try to match exactlly in our restaurants array 
-            //and then store that object under the userOpenRestaurantArray in the local storage 
+                //Now I will get the name of the restaurant and try to match exactlly in our restaurants array 
+                //and then store that object under the userOpenRestaurantArray in the local storage 
+
+                let parentDiv = event.target.parentElement.parentElement;
+
+                let childH2NameOfRestaurant = parentDiv.querySelector("h2").innerHTML;
+
+                console.log(parentDiv);
+                console.log(childH2NameOfRestaurant);
+
+                //!Now I have to iterate over the restaurantData array
+
+                restaurantData.map((currentRestaurant , currentIndex) => {
+                    //now here I have to check that the name of the currentRestaurant and childH2NameOfRestaurant both are strictlly equal or not then take decision
+
+                    if(currentRestaurant.name === childH2NameOfRestaurant){
+                        console.log("restaurant Matched");
+                        console.log(currentRestaurant);  //this is entire object 
+
+
+                        //* then I have to store this data in the local storage userOpenRestaurantArray
+
+                        //In local storage we canoot able to undate hence we will overide the data 
+                        // below is commanded because already it is declared above 
+                        // let currentUserZomato = JSON.parse(localStorage.getItem("currentUserZomato"));
+
+                        console.log(currentUserZomato);
+
+                        //now update currentUserZomato
+
+                        currentUserZomato.userOpenRestaurantArray.push(currentRestaurant);
+
+                        console.log(currentUserZomato.userOpenRestaurantArray);
+                        
+                        
+                        //* now also update that in the local storage for that current zomato user 
+                        localStorage.setItem("currentUserZomato" , JSON.stringify(currentUserZomato));
+
+
+                        //*if needed then also update in the all users data 
+
+
+                        // !now once the user click on that restaurant user should redirect to the menu.html website 
+
+                        window.location.href = "./menu.html";
+
+
+
+                    }
+                    else{
+                        // do not do anything because my data it static always name of the restaurant will get matched 
+
+                        // console.log("restaurant Un-Matched");
+
+                        
+                    }
+
+                })
+
+
+            }
+            else{
+                alert("Please login first");
+                window.location.href = "./login.html";
+        
+            }
+
+
             
-            let parentDiv = event.target.parentElement.parentElement;
-
-            let childH2NameOfRestaurant = parentDiv.querySelector("h2").innerHTML;
-
-            console.log(parentDiv);
-            console.log(childH2NameOfRestaurant);
-
-            //!Now I have to iterate over the restaurantData array
-
-            restaurantData.map((currentRestaurant , currentIndex) => {
-                //now here I have to check that the name of the currentRestaurant and childH2NameOfRestaurant both are strictlly equal or not then take decision
-
-                if(currentRestaurant.name === childH2NameOfRestaurant){
-                    console.log("restaurant Matched");
-                    console.log(currentRestaurant);  //this is entire object 
-
-
-                    //* then I have to store this data in the local storage userOpenRestaurantArray
-
-                    //In local storage we canoot able to undate hence we will overide the data 
-                    // below is commanded because already it is declared above 
-                    // let currentUserZomato = JSON.parse(localStorage.getItem("currentUserZomato"));
-
-                    console.log(currentUserZomato);
-
-                    //now update currentUserZomato
-
-                    currentUserZomato.userOpenRestaurantArray.push(currentRestaurant);
-
-                    console.log(currentUserZomato.userOpenRestaurantArray);
-                    
-                    
-                    //* now also update that in the local storage for that current zomato user 
-                    localStorage.setItem("currentUserZomato" , JSON.stringify(currentUserZomato));
-
-
-                    //*if needed then also update in the all users data 
-
-
-                    // !now once the user click on that restaurant user should redirect to the menu.html website 
-
-                    window.location.href = "./menu.html";
-
-
-
-                }
-                else{
-                    // do not do anything because my data it static always name of the restaurant will get matched 
-
-                    // console.log("restaurant Un-Matched");
-
-                    
-                }
-
-            })
 
             
             
