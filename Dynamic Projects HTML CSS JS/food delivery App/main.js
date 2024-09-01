@@ -295,8 +295,8 @@ function restaurantsClickEvents(){
 
             }
             else{
-                alert("Please login first");
-                window.location.href = "./login.html";
+                alert("Please Sign-Up first");
+                window.location.href = "./signUp.html";
         
             }
 

@@ -16,6 +16,11 @@ let dataFromStorage = JSON.parse(localStorage.getItem("AllUsersData"));
 
 console.log(dataFromStorage);
 
+// if(dataFromStorage === null){
+//     alert("please signUp First Before Login");
+//     window.location.href = "./signUp.html";
+// }
+
 
 
 
@@ -74,6 +79,16 @@ form.addEventListener("submit" , (event) => {
     }
     else{
         eForm.innerHTML = "Match Not Found";
+        eForm.style.color = "red";
+
+        // here I will take the one settimeout
+
+        setTimeout(() => {
+            alert("please signUp First Before Login");
+            window.location.href = "./signUp.html";
+        } , 3000)
+
+
         event.preventDefault();
 
     }
